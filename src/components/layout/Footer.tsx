@@ -24,7 +24,7 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
-            聚焦具身智能供应链、新能源与现代农业，以产业协同驱动绿色未来。
+            聚焦具身智能供应链、新能源与算力中心，以产业协同驱动绿色未来。
           </p>
           <div className="mt-5 flex items-center gap-3">
             <img

@@ -8,7 +8,7 @@ import { getBusiness, businesses } from '../config/businesses'
 import { projects } from '../config/projects'
 
 /**
- * 业务板块详情页（数据驱动：具身智能供应链 / 新能源 / 现代农业 共用模板）
+ * 业务板块详情页（数据驱动：具身智能供应链 / 新能源 / 算力中心 共用模板）
  * 结构：定位说明 → 能力范围 → 协同流程 → 应用场景 → 相关案例 → 合作 CTA
  */
 export function BusinessDetailPage() {
@@ -20,6 +20,9 @@ export function BusinessDetailPage() {
     description: biz?.summary,
     image: biz?.image,
   })
+
+  // 旧「现代农业」路由重定向到新的「算力中心」页面，避免旧链接 404 或展示旧内容
+  if (slug === 'modern-agriculture') return <Navigate to="/business/computing-infrastructure" replace />
 
   if (!biz) return <Navigate to="/business" replace />
 

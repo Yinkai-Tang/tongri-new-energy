@@ -11,11 +11,12 @@
  * - 工厂光储系统（越南食品厂 250kW/600kWh、缅甸纸巾厂等）
  * - 大型集装箱光储（西非科特迪瓦 2MW/6MWh、柬埔寨 250kW/1.2MWh）
  * - 物流车队电动化改装、叉车/环卫车换电等
+ * - 模块化数据中心基础设施方案（算力中心方向，状态与参数待公司确认）
  * ============================================================
  */
 
 /** 业务板块分类（用于筛选） */
-export type ProjectCategory = '具身智能供应链' | '新能源' | '现代农业'
+export type ProjectCategory = '具身智能供应链' | '新能源' | '算力中心'
 
 export interface ProjectDetailBlock {
   background: string
@@ -46,7 +47,7 @@ export const projectCategories: ('全部' | ProjectCategory)[] = [
   '全部',
   '具身智能供应链',
   '新能源',
-  '现代农业',
+  '算力中心',
 ]
 
 export const projects: Project[] = [
@@ -96,23 +97,23 @@ export const projects: Project[] = [
   },
   {
     slug: 'project-placeholder-03',
-    name: '项目名称待补充',
-    category: '现代农业',
-    location: '项目地点待补充',
+    name: '模块化数据中心基础设施方案',
+    category: '算力中心',
+    location: '[待公司确认是否可公开]',
     summary:
-      '项目简介待补充：建议描述项目涉及的生产环节（种植 / 加工 / 仓储 / 流通）与数字化、新能源应用点。',
+      '算力中心 / 数据中心基础设施方向的模块化数据中心方案能力展示。项目状态、系统配置与技术参数均为占位字段，待公司确认后发布。',
     image: '/images/project-3.svg',
-    imageAlt: '现代农业项目封面（占位图，可替换）',
+    imageAlt: '模块化数据中心基础设施方案封面（占位图，可替换）',
     detail: {
-      background: '项目背景待补充：介绍项目所在区域、农业业态与建设目标。',
-      needs: '客户需求待补充：描述生产效率、设施条件或能源利用方面的诉求。',
-      solution: '解决方案待补充：描述智慧农业设施、数字化管理与新能源应用方案。',
-      process: '实施过程待补充：描述建设周期、分期内容与协同方式。',
-      results: '项目成果待补充：描述运营情况与综合效益（需确认后发布）。',
+      background: '[待补充：项目背景与建设目标，需公司确认是否可公开]',
+      needs: '[待补充：算力规模、部署环境与可靠性要求]',
+      solution: '[待补充：方案范围与系统构成（模块化机房、供配电、制冷、网络与安全）]',
+      process: '[待补充：项目阶段与关键节点（方案设计 / 实施进展）]',
+      results: '[待补充：实施成果。项目状态待确认：规划方案 / 设计方案 / 已签约 / 建设中 / 已交付]',
     },
     gallery: [
-      { src: '/images/project-3.svg', alt: '项目图片占位 1（可替换）' },
-      { src: '/images/biz-agriculture-scene.svg', alt: '项目图片占位 2（可替换）' },
+      { src: '/images/project-3.svg', alt: '模块化数据中心方案图片占位 1（可替换）' },
+      { src: '/images/biz-computing-scene.svg', alt: '模块化数据中心方案图片占位 2（可替换）' },
     ],
     pending: true,
   },

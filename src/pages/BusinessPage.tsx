@@ -10,7 +10,7 @@ export function BusinessPage() {
   usePageMeta({
     title: '业务板块',
     description:
-      '同日新能源三大业务板块：具身智能供应链、新能源、现代农业——产业协同，互为支撑。',
+      '同日新能源三大业务板块：具身智能供应链、新能源、算力中心——产业协同，互为支撑。',
   })
 
   return (

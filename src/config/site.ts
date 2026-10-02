@@ -97,10 +97,10 @@ export const navItems: NavItem[] = [
         desc: '光伏储能 · 动力电池 · 能源管理',
       },
       {
-        label: '现代农业',
-        en: 'Modern Agriculture',
-        path: '/business/modern-agriculture',
-        desc: '智慧农业 · 农业设施 · 数字化管理',
+        label: '算力中心',
+        en: 'Computing Infrastructure',
+        path: '/business/computing-infrastructure',
+        desc: '模块化数据中心 · 供配电 · 制冷与网络',
       },
     ],
   },
@@ -122,6 +122,6 @@ export const footerLegalLinks = [
 export const cooperationOptions = [
   '具身智能供应链',
   '新能源',
-  '现代农业',
+  '算力中心',
   '其他',
 ] as const

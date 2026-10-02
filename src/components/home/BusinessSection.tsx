@@ -41,7 +41,7 @@ export function BusinessSection() {
                   <span className="absolute bottom-4 left-5 flex h-11 w-11 items-center justify-center border border-white/20 bg-navy-950/70 text-accent-soft backdrop-blur-sm transition-colors duration-300 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
                     <Icon
                       name={
-                        i === 0 ? 'chip' : i === 1 ? 'solar' : 'leaf'
+                        i === 0 ? 'chip' : i === 1 ? 'solar' : 'server'
                       }
                       className="h-5 w-5"
                     />

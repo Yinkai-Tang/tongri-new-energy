@@ -10,7 +10,7 @@ import { projects, projectCategories, type ProjectCategory } from '../config/pro
 export function ProjectsPage() {
   usePageMeta({
     title: '项目案例',
-    description: '同日新能源项目案例：具身智能供应链、新能源、现代农业领域的应用场景与合作实践。',
+    description: '同日新能源项目案例：具身智能供应链、新能源、算力中心领域的应用场景与合作实践。',
   })
 
   const [active, setActive] = useState<'全部' | ProjectCategory>('全部')

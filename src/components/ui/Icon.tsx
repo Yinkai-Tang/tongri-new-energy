@@ -3,6 +3,19 @@
  * 在数据配置中以 icon 名称字符串引用，如 icon: 'chip'
  */
 const icons: Record<string, React.ReactNode> = {
+  server: (
+    <>
+      <rect x="4" y="3" width="16" height="7" rx="1" />
+      <rect x="4" y="14" width="16" height="7" rx="1" />
+      <path d="M8 6.5h.01M8 17.5h.01M12 6.5h4M12 17.5h4" />
+    </>
+  ),
+  cooling: (
+    <>
+      <path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19" />
+      <path d="M12 7 9.5 4.5M12 7l2.5-2.5M12 17l-2.5 2.5M12 17l2.5 2.5M7 12l-2.5-2.5M7 12l-2.5 2.5M17 12l2.5-2.5M17 12l2.5 2.5" />
+    </>
+  ),
   chip: (
     <>
       <rect x="7" y="7" width="10" height="10" rx="1" />

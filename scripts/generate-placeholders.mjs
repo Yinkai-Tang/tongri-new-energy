@@ -153,6 +153,49 @@ const greenhouse = (x, y, w = 420, h = 180, color = C.green) => `
     <path d="M 0 ${h * 0.62} Q ${w / 2} ${h * 0.12} ${w} ${h * 0.62}" stroke-opacity="0.6" stroke-width="2"/>
   </g>`
 
+/** 服务器机柜阵列（透视排布 + 指示灯） */
+const rackRows = (x, y, s = 1, color = C.blue) => {
+  const rack = (rx, ry, rw, rh, lit) => {
+    let g = `<g transform="translate(${rx} ${ry})">
+      <rect x="0" y="0" width="${rw}" height="${rh}" fill="${C.bg2}" stroke="${color}" stroke-width="2.5"/>`
+    const units = Math.floor(rh / 22)
+    for (let i = 0; i < units; i++) {
+      const uy = 6 + i * 22
+      g += `<line x1="4" y1="${uy}" x2="${rw - 4}" y2="${uy}" stroke="${color}" stroke-opacity="0.4" stroke-width="1.5"/>`
+      if ((i + lit) % 2 === 0) {
+        g += `<circle cx="${rw - 10}" cy="${uy + 11}" r="2.5" fill="${C.green}"/>`
+        g += `<circle cx="${rw - 18}" cy="${uy + 11}" r="2.5" fill="${color}" opacity="0.7"/>`
+      }
+    }
+    return g + '</g>'
+  }
+  let g = `<g transform="translate(${x} ${y}) scale(${s})">`
+  // 三排机柜（近大远小）
+  g += rack(0, 210, 118, 200, 0) + rack(134, 210, 118, 200, 1) + rack(268, 210, 118, 200, 0)
+  g += rack(96, 96, 96, 158, 1) + rack(208, 96, 96, 158, 0)
+  g += rack(176, 20, 76, 118, 1)
+  g += `<path d="M -20 260 L 130 150 L 300 150 L 430 260 Z" fill="none" stroke="${C.gray}" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="6 6"/>`
+  return g + '</g>'
+}
+
+/** 网络拓扑节点连线（Spine-Leaf 抽象） */
+const networkTopo = (x, y, s = 1, color = C.green) => {
+  const spine = [[0, 0], [90, 0], [180, 0]]
+  const leaf = [[-45, 90], [45, 90], [135, 90], [225, 90]]
+  let g = `<g transform="translate(${x} ${y}) scale(${s})">`
+  for (const [lx, ly] of leaf) {
+    for (const [sx, sy] of spine) {
+      g += `<line x1="${lx + 20}" y1="${ly}" x2="${sx + 20}" y2="${sy}" stroke="${color}" stroke-opacity="0.35" stroke-width="1.5"/>`
+    }
+    g += `<rect x="${lx}" y="${ly}" width="40" height="26" fill="${C.bg2}" stroke="${color}" stroke-width="2"/>`
+  }
+  for (const [sx, sy] of spine) {
+    g += `<rect x="${sx}" y="${sy}" width="40" height="26" fill="${C.bg2}" stroke="${C.blue}" stroke-width="2"/>`
+    g += `<circle cx="${sx + 20}" cy="${sy + 13}" r="3" fill="${color}"/>`
+  }
+  return g + '</g>'
+}
+
 /** 田垄（透视：纵向垄线向消失点汇聚 + 横向垄线） */
 const fieldRows = (x, y, w, h, color = C.green) => {
   let s = `<g transform="translate(${x} ${y})">`
@@ -367,43 +410,38 @@ const save = (name, content) => {
   }
 }
 
-/* 9. 现代农业 · 板块主图（温室 + 田垄） */
+/* 9. 算力中心 · 板块主图（机柜阵列 + 网络拓扑） */
 {
-  const w = 1600, h = 1000, id = 'agri'
+  const w = 1600, h = 1000, id = 'compute'
   const inner =
-    base(id, w, h, '#0A1720', '#143026') +
-    glowG(id, 480, 260, 380) +
-    greenhouse(180, 520, 560, 240, C.greenSoft) +
-    fieldRows(880, 620, 620, 320, C.green) +
-    node(480, 260, 8, C.green) +
-    dataLines(['M -30 900 C 420 820, 980 960, 1640 850'], C.green, 0.5) +
-    turbine(1450, 900, 210, C.greenSoft) +
-    label(w, h, 'IMG-009', '现代农业 · 智能温室/种植基地实景')
-  save('biz-agriculture-hero.svg', svg(w, h, id, inner))
+    base(id, w, h, '#0A1420', '#12233B') +
+    glowB(id, 1180, 240, 400) + glowG(id, 380, 300, 340) +
+    rackRows(120, 480, 1.25, C.blue) +
+    networkTopo(1050, 520, 1.3, C.green) +
+    dataLines(['M -30 930 C 480 850, 1050 990, 1640 880'], C.blue, 0.5) +
+    node(1180, 240, 8) +
+    label(w, h, 'IMG-009', '算力中心 · 模块化数据中心/机柜阵列实景')
+  save('biz-computing-hero.svg', svg(w, h, id, inner))
 }
 
-/* 10. 现代农业 · 农业科技细节 */
+/* 10. 算力中心 · 机柜与制冷细节 */
 {
-  const w = 1600, h = 1000, id = 'agri2'
-  const leaf = (x, y, s = 1, col = C.green) => `
-    <g transform="translate(${x} ${y}) scale(${s})" fill="none" stroke="${col}" stroke-width="7" stroke-linecap="round">
-      <path d="M 0 0 C -90 -30, -140 -110, -150 -220 C -40 -210, 30 -150, 0 0 Z" fill="${C.bg2}"/>
-      <path d="M -8 -18 C -60 -70, -100 -130, -132 -196" stroke-opacity="0.7" stroke-width="4"/>
-      <path d="M 40 0 C 40 -70, 90 -130, 170 -160" stroke-opacity="0"/>
-    </g>`
+  const w = 1600, h = 1000, id = 'compute2'
   const inner =
-    base(id, w, h, '#0A1720', '#15332A') +
-    glowG(id, 1100, 280, 380) +
-    leaf(700, 880, 1.6, C.greenSoft) +
-    leaf(950, 900, 1.1, C.green) +
-    `<g stroke="${C.blue}" stroke-width="3" fill="none" opacity="0.7">
-      <circle cx="1100" cy="280" r="60"/><circle cx="1100" cy="280" r="100" opacity="0.5"/>
-      <line x1="1100" y1="180" x2="1100" y2="220"/><line x1="1100" y1="340" x2="1100" y2="380"/>
-      <line x1="1000" y1="280" x2="1040" y2="280"/><line x1="1160" y1="280" x2="1200" y2="280"/>
+    base(id, w, h, '#0A1420', '#13273D') +
+    glowG(id, 1120, 260, 380) +
+    rackRows(160, 420, 1.6, C.blue) +
+    networkTopo(940, 560, 1.15, C.green) +
+    `<g transform="translate(1230 300)" stroke="${C.green}" fill="none" stroke-width="3">
+      <circle r="52"/><circle r="20"/>
+      ${Array.from({ length: 8 }, (_, i) => {
+        const a = (i / 8) * Math.PI * 2
+        return `<line x1="${Math.cos(a) * 52}" y1="${Math.sin(a) * 52}" x2="${Math.cos(a) * 72}" y2="${Math.sin(a) * 72}"/>`
+      }).join('')}
     </g>` +
-    dataLines(['M -30 300 C 400 220, 900 360, 1640 250'], C.green, 0.35) +
-    label(w, h, 'IMG-010', '现代农业 · 农业物联网/数字化管理场景')
-  save('biz-agriculture-scene.svg', svg(w, h, id, inner))
+    dataLines(['M -30 320 C 480 240, 1050 380, 1640 270'], C.green, 0.4) +
+    label(w, h, 'IMG-010', '算力中心 · 机柜/制冷/网络基础设施实景')
+  save('biz-computing-scene.svg', svg(w, h, id, inner))
 }
 
 /* 11-14. 项目案例封面（motif 接收 id 参数） */
@@ -420,9 +458,10 @@ projectCover('project-2.svg', 'IMG-012', '案例 · 新能源电站项目（待�
   (id) => glowG(id, 1240, 240, 380) + energyOrb(1240, 240, 66, C.green) + solarArray(200, 620, 1.45, C.green) +
     turbine(1400, 900, 230, C.greenSoft) +
     dataLines(['M -30 930 C 480 850, 1050 980, 1640 880'], C.green, 0.5), '#08131F', '#13293F')
-projectCover('project-3.svg', 'IMG-013', '案例 · 现代农业项目（待补充）',
-  (id) => glowG(id, 420, 280, 360) + greenhouse(240, 500, 620, 260, C.greenSoft) + fieldRows(950, 600, 540, 330) +
-    dataLines(['M -30 900 C 420 820, 980 960, 1640 850'], C.green, 0.5), '#0A1720', '#143026')
+projectCover('project-3.svg', 'IMG-013', '案例 · 模块化数据中心基础设施方案（待确认）',
+  (id) => glowB(id, 500, 280, 380) + rackRows(240, 480, 1.35, C.blue) + networkTopo(1000, 560, 1.2, C.green) +
+    essContainer(1020, 640, 380, 170, C.green) +
+    dataLines(['M -30 910 C 480 830, 1050 970, 1640 860'], C.blue, 0.5))
 projectCover('project-4.svg', 'IMG-014', '案例 · 综合产业项目（待补充）',
   (id) => glowB(id, 820, 260, 400) + essContainer(220, 660, 480, 200, C.green) + essContainer(780, 660, 480, 200, C.blue) +
     skyline(1150, 660, 0.5, '#0F2136') +
@@ -530,11 +569,11 @@ ${[
   ['biz-supply-chain-scene.svg', 'IMG-006', '智能制造 / 质检场景', '具身智能供应链 · 能力区'],
   ['biz-energy-hero.svg', 'IMG-007', '光伏 / 风电 / 储能电站', '新能源 · 页头与总览卡片'],
   ['biz-energy-scene.svg', 'IMG-008', '储能系统 / 集装箱储能', '新能源 · 能力区'],
-  ['biz-agriculture-hero.svg', 'IMG-009', '智能温室 / 种植基地', '现代农业 · 页头与总览卡片'],
-  ['biz-agriculture-scene.svg', 'IMG-010', '农业物联网 / 数字化管理', '现代农业 · 能力区'],
+  ['biz-computing-hero.svg', 'IMG-009', '模块化数据中心 / 机柜阵列', '算力中心 · 页头与总览卡片'],
+  ['biz-computing-scene.svg', 'IMG-010', '机柜 / 制冷 / 网络基础设施', '算力中心 · 能力区'],
   ['project-1.svg', 'IMG-011', '具身智能供应链项目现场', '项目案例（待补充资料）'],
   ['project-2.svg', 'IMG-012', '新能源电站项目现场', '项目案例（待补充资料）'],
-  ['project-3.svg', 'IMG-013', '现代农业项目现场', '项目案例（待补充资料）'],
+  ['project-3.svg', 'IMG-013', '模块化数据中心方案现场（待公司确认）', '项目案例（待确认资料）'],
   ['project-4.svg', 'IMG-014', '综合产业项目现场', '项目案例（待补充资料）'],
   ['news-1.svg', 'IMG-015', '公司动态配图', '新闻中心'],
   ['news-2.svg', 'IMG-016', '行业洞察配图', '新闻中心'],
@@ -548,8 +587,8 @@ ${[
   .join('\n')}
 
 ## 摄影图选型建议
-优先选择：智能工厂、自动化产线、机器人零部件、光伏板阵列、储能集装箱、风机、现代温室、
-农业机械、产业园区航拍、技术人员工作照等方向的**正版可商用**图片，色调偏冷、深色天空更贴合站点气质。
+优先选择：智能工厂、自动化产线、机器人零部件、光伏板阵列、储能集装箱、风机、数据中心机房、
+服务器机柜阵列、模块化数据中心、产业园区航拍、技术人员工作照等方向的**正版可商用**图片，色调偏冷、深色天空更贴合站点气质。
 `
 writeFileSync(resolve(OUT, 'IMAGES.md'), md, 'utf-8')
 console.log(`已生成 ${files.length} 张占位图 + IMAGES.md → ${OUT}`)

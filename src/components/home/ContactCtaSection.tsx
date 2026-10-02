@@ -49,7 +49,7 @@ export function ContactCtaSection() {
                 {[
                   { label: '具身智能供应链合作', icon: 'chip' },
                   { label: '新能源项目合作', icon: 'solar' },
-                  { label: '现代农业合作', icon: 'leaf' },
+                  { label: '算力中心合作', icon: 'server' },
                   { label: '其他合作事项', icon: 'handshake' },
                 ].map((item) => (
                   <Link
