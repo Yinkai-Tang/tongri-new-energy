@@ -40,7 +40,7 @@ export function IntroSection() {
                 loading="lazy"
               />
               <figcaption className="absolute bottom-0 left-0 bg-navy-950/85 px-4 py-2 text-[11px] text-slate-500 backdrop-blur-sm">
-                企业园区实景（占位图，可替换）
+                工业制造车间场景示意
               </figcaption>
               <span className="absolute -bottom-1 left-0 h-[3px] w-24 bg-gradient-to-r from-accent to-energy" />
             </figure>

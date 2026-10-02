@@ -5,7 +5,6 @@ import { Reveal } from '../components/ui/Reveal'
 import { SectionTitle } from '../components/ui/SectionTitle'
 import { Icon } from '../components/ui/Icon'
 import { getBusiness, businesses } from '../config/businesses'
-import { projects } from '../config/projects'
 
 /**
  * 业务板块详情页（数据驱动：具身智能供应链 / 新能源 / 算力中心 共用模板）
@@ -26,7 +25,6 @@ export function BusinessDetailPage() {
 
   if (!biz) return <Navigate to="/business" replace />
 
-  const relatedProjects = projects.filter((p) => p.category === biz.name).slice(0, 3)
   const otherBiz = businesses.filter((b) => b.slug !== biz.slug)
   const themeColor = biz.theme === 'energy' ? 'text-energy' : 'text-accent-soft'
   const themeBorder = biz.theme === 'energy' ? 'border-energy/40' : 'border-accent/40'
@@ -151,36 +149,27 @@ export function BusinessDetailPage() {
         </div>
       </section>
 
-      {/* 相关案例 */}
+      {/* 合作方式（承接原"相关案例"栏目位置；案例栏目待有真实案例后启用） */}
       <section className="bg-navy-900/40 py-20 md:py-24">
         <div className="container-content">
-          <SectionTitle en="RELATED CASES" title="相关案例" desc="案例信息为占位模板，正式内容确认后发布。" />
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {relatedProjects.length > 0 ? (
-              relatedProjects.map((p, i) => (
-                <Reveal key={p.slug} delay={i * 90}>
-                  <Link to={`/projects/${p.slug}`} className="group card-dark card-dark-hover block h-full overflow-hidden">
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <img src={p.image} alt={p.imageAlt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                      <span className="absolute right-3 top-3 border border-white/15 bg-navy-950/80 px-2 py-0.5 text-[10px] text-slate-500 backdrop-blur-sm">待补充</span>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="text-[15px] font-semibold text-white group-hover:text-accent-soft">{p.name}</h3>
-                      <p className="mt-1.5 flex items-center gap-1.5 text-xs text-slate-500">
-                        <Icon name="pin" className="h-3.5 w-3.5" />{p.location}
-                      </p>
-                    </div>
-                  </Link>
-                </Reveal>
-              ))
-            ) : (
-              <Reveal>
-                <div className="card-dark col-span-full flex flex-col items-center gap-2 p-10 text-center">
-                  <Icon name="doc" className="h-8 w-8 text-slate-600" />
-                  <p className="text-sm text-slate-400">本板块案例资料整理中，欢迎直接联系我们了解最新项目进展。</p>
+          <SectionTitle en="COOPERATION" title="合作方式" desc="围绕项目全周期，我们支持以下合作方式，具体范围以双方沟通为准。" />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: '需求咨询与方案探讨', desc: '面向您的业务场景，沟通需求背景，探讨可行的方案方向。', icon: 'message' },
+              { title: '方案设计与设备配置', desc: '输出方案设计建议与设备选型组合，兼顾性能、成本与交付。', icon: 'doc' },
+              { title: '系统集成与项目交付', desc: '依托集团制造与供应链体系，支持系统集成与批量交付。', icon: 'gear' },
+              { title: '运维支持与长期协作', desc: '按项目约定提供运行保障、维护响应与长期技术协作。', icon: 'headset' },
+            ].map((c, i) => (
+              <Reveal key={c.title} delay={i * 80}>
+                <div className="card-dark card-dark-hover group h-full p-6">
+                  <span className={`flex h-11 w-11 items-center justify-center border ${themeBorder} ${themeColor} bg-white/[0.02]`}>
+                    <Icon name={c.icon} className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 text-base font-semibold text-white">{c.title}</h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-slate-400">{c.desc}</p>
                 </div>
               </Reveal>
-            )}
+            ))}
           </div>
         </div>
       </section>

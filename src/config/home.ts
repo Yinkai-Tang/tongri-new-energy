@@ -16,8 +16,11 @@ export const hero = {
   subtitle:
     '聚焦具身智能供应链、新能源与算力中心，构建面向未来的产业能力。',
   /** 背景）（1920×1080，public/images/hero-home.svg） */
-  image: asset('images/hero-home.svg'),
-  imageAlt: '智能工厂与绿色能源产业场景主视觉（占位图，可替换）',
+  image: asset('images/hero-home.webp'),
+  imageMobile: asset('images/hero-home-m.webp'),
+  imageAlt: '工业制造车间焊接作业场景（行业场景示意）',
+  sourceType: 'stock' as const,
+  isIllustrative: true,
   ctas: {
     primary: { label: '了解同日新能源', path: '/about' },
     secondary: { label: '联系我们', path: '/contact' },
@@ -35,12 +38,6 @@ export const heroStats = [
     // 来源：集团资料"深耕智能制造与新能源三十年"，指同日集团层面
   },
   { value: '3', unit: '大', label: '战略业务板块', note: '' },
-  {
-    value: '10+',
-    unit: '个',
-    label: '国家和地区项目足迹',
-    // 参考集团案例分布（德国/新加坡/越南/西非等），口径待确认
-  },
   { value: '100%', unit: '', label: '客户价值导向的长期承诺' },
 ]
 
@@ -53,8 +50,11 @@ export const intro = {
     '我们相信，产业协同是驱动长期价值的核心。以制造为根基、以技术为纽带、以绿色为方向，同日新能源愿与客户和伙伴共同成长。',
     // ↑ 简介文案为占位撰写，发布前请按公司审定口径修改。
   ],
-  image: asset('images/intro-company.svg'),
-  imageAlt: '同日新能源产业园区（占位图，可替换）',
+  image: asset('images/intro-company.webp'),
+  sourceType: 'stock' as const,
+  isIllustrative: true,
+  replacementPriority: 'high' as const,
+  imageAlt: '工业制造车间场景（行业场景示意，非公司实景）',
   cta: { label: '了解更多', path: '/about' },
 }
 

@@ -13,12 +13,15 @@ export function Hero() {
     <section className="relative flex min-h-[100svh] flex-col overflow-hidden bg-navy-950">
       {/* 背景图与遮罩 */}
       <div className="absolute inset-0">
-        <img
-          src={hero.image}
-          alt={hero.imageAlt}
-          className="h-full w-full object-cover"
-          fetchPriority="high"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet={hero.imageMobile} />
+          <img
+            src={hero.image}
+            alt={hero.imageAlt}
+            className="h-full w-full object-cover"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/60 to-navy-950/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/60" />
         <div className="absolute inset-0 bg-grid opacity-50" />

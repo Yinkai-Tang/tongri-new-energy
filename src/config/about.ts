@@ -15,8 +15,10 @@ export const about = {
     title: '关于我们',
     titleEn: 'ABOUT US',
     desc: '以制造为根基、以技术为核心、以绿色为方向。',
-    image: asset('images/about-park.svg'),
-    imageAlt: '同日新能源产业园区（占位图，可替换）',
+    image: asset('images/about-park.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    imageAlt: '能源基础设施日落场景（行业场景示意，非公司实景）',
   },
 
   /** 公司简介 */
@@ -27,8 +29,11 @@ export const about = {
       '同日集团以产业为根基、以技术为核心、以资本为工具，深耕智能制造与新能源两大国家重点战略领域，形成了"产业根基 — 技术引领 — 投资孵化 — 产业整合"的完整闭环，为同日新能源的成长提供了坚实的产业支撑。',
       '面向未来，同日新能源将坚持长期主义，聚焦产业真实需求，稳步构建"可靠制造 + 科技创新 + 绿色可持续"的综合能力，与产业伙伴共同成长。',
     ],
-    image: asset('images/about-manufacturing.svg'),
-    imageAlt: '集团智能制造产业基础（占位图，可替换）',
+    image: asset('images/about-manufacturing.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    replacementPriority: 'high' as const,
+    imageAlt: '自动化产线场景（行业场景示意，非公司实景）',
   },
 
   /** 使命 / 愿景 / 价值观 */
@@ -109,9 +114,12 @@ export const about = {
   /** 企业文化 / 团队风貌 */
   culture: {
     title: '企业文化 · 团队风貌',
-    desc: '务实、协同、长期主义——我们的团队在产业一线持续成长。（图片与文字均为占位，可替换）',
-    image: asset('images/about-team.svg'),
-    imageAlt: '同日新能源团队风貌（占位图，可替换）',
+    desc: '务实、协同、长期主义——我们与产业伙伴在一线共同成长。（配图为行业团队协作场景示意，非公司人员实拍）',
+    image: asset('images/about-team.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    replacementPriority: 'high' as const,
+    imageAlt: '团队协作场景（行业场景示意，非公司人员）',
     keywords: ['务实可靠', '协同共赢', '长期主义', '持续成长'],
   },
 

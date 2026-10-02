@@ -37,6 +37,10 @@ export interface Business {
   /** 卡片与页头配图（public/images 下） */
   image: string
   imageAlt: string
+  /** 素材来源标记：stock = 图库行业场景示意（非公司实景），公司素材到位后逐张替换 */
+  sourceType?: 'stock' | 'company'
+  isIllustrative?: boolean
+  replacementPriority?: 'high' | 'medium' | 'low'
   /** 详情页主题色：accent = 电光蓝，energy = 绿色 */
   theme: 'accent' | 'energy'
   /** 板块定位说明（详情页首段） */
@@ -62,8 +66,11 @@ export const businesses: Business[] = [
     summary:
       '依托集团三十余年智能制造产业基础，聚焦机器人核心零部件、精密驱动与电控系统的供应链整合与制造交付，为具身智能产业化提供可靠的制造底座。',
     index: '01',
-    image: asset('images/biz-supply-chain-hero.svg'),
-    imageAlt: '自动化产线与机器人零部件（占位图，可替换）',
+    image: asset('images/biz-supply-chain-hero.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    replacementPriority: 'medium' as const,
+    imageAlt: '精密加工车间场景（行业场景示意，非公司实景）',
     theme: 'accent',
     positioning: [
       '具身智能的产业化，离不开可靠、高效、柔性的制造与供应链体系。本板块依托同日集团在智能制造领域三十余年的产业积淀，聚焦机器人及自动化装备的核心零部件供应、精密制造与供应链整合服务。',
@@ -141,8 +148,11 @@ export const businesses: Business[] = [
     summary:
       '依托集团在动力电池与储能系统领域的技术与制造积淀，围绕「光伏 + 储能 + 能源管理」提供覆盖户用、工商业与园区的绿色能源产品与解决方案。',
     index: '02',
-    image: asset('images/biz-energy-hero.svg'),
-    imageAlt: '光伏电站、风机与储能系统（占位图，可替换）',
+    image: asset('images/biz-energy-hero.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    replacementPriority: 'medium' as const,
+    imageAlt: '风电场日落场景（行业场景示意，非公司实景）',
     theme: 'energy',
     positioning: [
       '新能源板块是同日集团面向绿色能源产业的核心业务之一，依托集团在动力电池、储能系统集成与能源管理领域的技术与制造积淀，为全球客户提供安全、高效的绿色能源产品与解决方案。',
@@ -219,8 +229,11 @@ export const businesses: Business[] = [
     summary:
       '面向 AI 算力、高性能计算与企业数字化需求，提供模块化数据中心及算力基础设施解决方案，连接算力需求与基础设施能力。',
     index: '03',
-    image: asset('images/biz-computing-hero.svg'),
-    imageAlt: '模块化数据中心机房与机柜阵列示意（占位图，可替换）',
+    image: asset('images/biz-computing-hero.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    replacementPriority: 'medium' as const,
+    imageAlt: '数据中心机房布线场景（行业场景示意，非公司实景）',
     theme: 'accent',
     positioning: [
       '算力中心不仅是服务器和机柜的集合，还需要稳定的供配电系统、高效的制冷系统、可靠的网络架构、安全体系和持续运维能力。同日新能源围绕算力基础设施建设需求，关注模块化数据中心、供配电、制冷、网络与安全等关键环节。',

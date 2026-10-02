@@ -5,7 +5,7 @@ import { IntroSection } from '../components/home/IntroSection'
 import { BusinessSection } from '../components/home/BusinessSection'
 import { SynergySection } from '../components/home/SynergySection'
 import { AdvantagesSection } from '../components/home/AdvantagesSection'
-import { ProjectsSection } from '../components/home/ProjectsSection'
+import { ApplicationScenariosSection } from '../components/home/ApplicationScenariosSection'
 import { NewsSection } from '../components/home/NewsSection'
 import { ContactCtaSection } from '../components/home/ContactCtaSection'
 
@@ -25,7 +25,7 @@ export function HomePage() {
       <BusinessSection />
       <SynergySection />
       <AdvantagesSection />
-      <ProjectsSection />
+      <ApplicationScenariosSection />
       <NewsSection />
       <ContactCtaSection />
     </>

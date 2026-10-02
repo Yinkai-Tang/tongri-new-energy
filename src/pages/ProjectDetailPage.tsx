@@ -4,6 +4,7 @@ import { PageHeader } from '../components/layout/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { Icon } from '../components/ui/Icon'
 import { getProject, projects } from '../config/projects'
+import { businesses } from '../config/businesses'
 import { site } from '../config/site'
 
 /**
@@ -13,6 +14,13 @@ import { site } from '../config/site'
 export function ProjectDetailPage() {
   const { slug } = useParams()
   const project = getProject(slug ?? '')
+
+  // 暂无可公开的真实案例：占位案例直接跳转到对应业务板块页，
+  // 避免对外展示虚构的项目名称、地点或成果（案例数据保留待未来启用）。
+  if (project?.pending) {
+    const biz = businesses.find((b) => b.name === project.category)
+    return <Navigate to={biz ? `/business/${biz.slug}` : '/business'} replace />
+  }
 
   usePageMeta({
     title: project ? project.name : '项目案例',

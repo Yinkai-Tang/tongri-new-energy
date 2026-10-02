@@ -120,7 +120,6 @@ export const navItems: NavItem[] = [
       },
     ],
   },
-  { label: '项目案例', en: 'PROJECTS', path: '/projects' },
   { label: '新闻中心', en: 'NEWS', path: '/news' },
   { label: '联系我们', en: 'CONTACT', path: '/contact' },
 ]
