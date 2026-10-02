@@ -27,7 +27,7 @@ npm run placeholders  # 重新生成占位图（见下文"图片替换"）
 | `/business` | 业务板块总览 |
 | `/business/embodied-intelligence-supply-chain` | 具身智能供应链 |
 | `/business/new-energy` | 新能源 |
-| `/business/modern-agriculture` | 现代农业 |
+| `/business/computing-infrastructure` | 算力中心（旧路由 `/business/modern-agriculture` 自动重定向） |
 | `/projects`、`/projects/:slug` | 项目案例列表 / 详情（支持按业务筛选） |
 | `/news`、`/news/:slug` | 新闻列表 / 详情（支持分类筛选、相关推荐、分享） |
 | `/contact` | 联系我们（商务表单 + 联系方式 + 地图占位） |
