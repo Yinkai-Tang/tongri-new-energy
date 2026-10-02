@@ -18,9 +18,15 @@ export function Footer() {
         {/* 品牌 */}
         <div>
           <div className="flex items-center gap-3">
-            <img src={site.logoPng} alt="TUNGRAY 同日集团标志" className="h-10 w-auto" />
-            <span className="border-l border-white/10 pl-3 text-base font-bold text-white">
-              同日新能源
+            <img
+              src={site.brand.logoWhite}
+              alt="同日集团 TUNGRAY"
+              className="h-10 w-auto object-contain"
+              width={355}
+              height={81}
+            />
+            <span className="border-l border-white/10 pl-3 text-sm font-medium text-white">
+              {site.fullName}
             </span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">

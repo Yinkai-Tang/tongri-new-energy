@@ -1,5 +1,52 @@
 import { Link } from 'react-router-dom'
+import { site } from '../../config/site'
 import { Reveal } from './Reveal'
+
+/**
+ * 品牌 Logo 组件（全站唯一 Logo 入口，勿在页面内手动放 Logo）：
+ * - 使用官方 Tungray 横版单色资产，完整比例 object-contain，禁止拉伸/裁切/加效果；
+ * - variant='white'（默认）：深蓝/黑/深灰背景的 Header、Footer 与深色页面；
+ * - variant='black'：白/浅灰背景页面及打印（未来若引入浅色页头自动切换即改此参数）；
+ * - 主体名称以普通文字形式置于 Logo 旁，不参与 Logo 图形。
+ */
+export function BrandLogo({
+  compact = false,
+  variant = 'white',
+}: {
+  compact?: boolean
+  variant?: 'white' | 'black'
+}) {
+  const src = variant === 'black' ? site.brand.logoBlack : site.brand.logoWhite
+  return (
+    <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="同日集团 TUNGRAY">
+      <img
+        src={src}
+        alt="同日集团 TUNGRAY"
+        className="h-7 w-auto object-contain md:h-9"
+        width={355}
+        height={81}
+      />
+      {!compact && (
+        <span className="flex flex-col leading-tight">
+          <span
+            className={`text-xs font-medium transition-colors duration-300 ${
+              variant === 'black' ? 'text-ink' : 'text-white'
+            }`}
+          >
+            {site.fullName}
+          </span>
+          <span
+            className={`mt-0.5 text-[9px] uppercase tracking-wide transition-colors duration-300 ${
+              variant === 'black' ? 'text-ink-mute' : 'text-slate-500'
+            }`}
+          >
+            {site.fullNameEn}
+          </span>
+        </span>
+      )}
+    </Link>
+  )
+}
 
 /** 通用区块标题：英文小标 + 中文大标 + 可选描述 */
 export function SectionTitle({
@@ -27,37 +74,5 @@ export function SectionTitle({
         }`}
       />
     </Reveal>
-  )
-}
-
-/** 品牌 Logo 组合（SVG 绘制，清晰且无版权风险；正式品牌 Logo 出品后可替换） */
-export function BrandLogo({ compact = false }: { compact?: boolean }) {
-  return (
-    <Link to="/" className="flex items-center gap-3" aria-label="同日新能源 首页">
-      {/* 图形标：能量核心 */}
-      <svg viewBox="0 0 44 44" className="h-9 w-9 shrink-0" aria-hidden="true">
-        <defs>
-          <linearGradient id="logo-g" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#2E9BFF" />
-            <stop offset="1" stopColor="#34D08C" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M22 3 6.5 12v20L22 41l15.5-9V12L22 3z"
-          fill="none"
-          stroke="url(#logo-g)"
-          strokeWidth="2.4"
-        />
-        <path d="M24.5 11 15 24h6l-1.8 9L29 19.5h-6.2l1.7-8.5z" fill="url(#logo-g)" />
-      </svg>
-      {!compact && (
-        <span className="flex flex-col leading-none">
-          <span className="text-lg font-bold tracking-wide text-white">同日新能源</span>
-          <span className="mt-1 text-[10px] uppercase tracking-[0.22em] text-slate-400">
-            Tungray New Energy
-          </span>
-        </span>
-      )}
-    </Link>
   )
 }

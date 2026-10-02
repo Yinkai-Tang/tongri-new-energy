@@ -10,17 +10,31 @@
 export const site = {
   /** 品牌名（导航、页脚、SEO 使用） */
   name: '同日新能源',
-  /** 公司全称【待确认：资料中为"同日绿电新能科技有限公司"】 */
-  fullName: '同日绿电新能科技有限公司',
-  fullNameEn: 'Tungray Green Energy New Technology Co., Ltd.',
+  /** 公司全称【待确认：以公司最终对外主体名称为准】 */
+  fullName: '上海同日新能源技术有限公司',
+  fullNameEn: '[Company English Name — To Be Confirmed]',
   /** 集团名称（关于我们/页脚使用） */
   groupName: '同日集团',
   groupNameEn: 'Tungray Group',
   /** 品牌口号（来自集团资料） */
   slogan: '未来同创享',
   sloganEn: 'We Create, We Share',
-  /** 官网 Logo：header 使用本站绘制的品牌组合，footer 使用集团官方 PNG */
-  logoPng: '/images/brand/tungray-logo.png',
+  /**
+   * 品牌资产（官方 Tungray Logo，单色透明底）
+   * 目录：public/brand/ —— 全站统一经 BrandLogo 组件引用，勿在页面内手动放置
+   * 白色版：深蓝/黑/深灰背景（Header、Footer、深色页面）
+   * 黑色版：白/浅灰背景与打印场景（当前站点暂无浅色页头，接入时传 variant='black'）
+   * PNG 为原始分辨率（355×81，页头显示约 2.5x）；SVG 为内嵌 PNG 的自包含包装，
+   *   后续拿到官方矢量稿时直接同名覆盖即可。
+   */
+  brand: {
+    logoWhite: '/brand/tungray-logo-white.svg',
+    logoBlack: '/brand/tungray-logo-black.svg',
+    symbolWhite: '/brand/tungray-symbol-white.svg',
+    symbolBlack: '/brand/tungray-symbol-black.svg',
+    /** 官方彩色原版（留档，页面不直接使用） */
+    logoColor: '/brand/tungray-logo-color.png',
+  },
 
   /** ============ 联系方式（来自集团资料，均【待确认】） ============ */
   contact: {
