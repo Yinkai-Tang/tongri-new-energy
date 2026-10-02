@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { asset } from '../utils/asset'
 import { PageHeader } from '../components/layout/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { businesses } from '../config/businesses'
@@ -19,7 +20,7 @@ export function BusinessPage() {
         en="OUR BUSINESS"
         title="业务板块"
         desc="以制造为根基、以技术为纽带、以绿色为方向，三大业务互为支撑、协同发展。"
-        image="/images/biz-energy-hero.svg"
+        image={asset('images/biz-energy-hero.webp')}
         imageAlt="业务板块页头背景（占位图，可替换）"
         crumbs={[{ label: '首页', path: '/' }, { label: '业务板块' }]}
       />

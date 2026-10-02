@@ -1,4 +1,5 @@
 import { usePageMeta } from '../hooks/usePageMeta'
+import { asset } from '../utils/asset'
 import { PageHeader } from '../components/layout/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { site } from '../config/site'
@@ -51,7 +52,7 @@ export function LegalPage({ type }: { type: 'terms' | 'privacy' }) {
         en={isTerms ? 'LEGAL' : 'PRIVACY'}
         title={isTerms ? '法律声明' : '隐私政策'}
         desc="本页为占位模板，正式文本请由公司法务审定后替换。"
-        image="/images/about-park.svg"
+        image={asset('images/about-park.webp')}
         imageAlt="页头背景（占位图，可替换）"
         crumbs={[{ label: '首页', path: '/' }, { label: isTerms ? '法律声明' : '隐私政策' }]}
       />

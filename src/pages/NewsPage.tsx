@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { asset } from '../utils/asset'
 import { PageHeader } from '../components/layout/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { Icon } from '../components/ui/Icon'
@@ -23,7 +24,7 @@ export function NewsPage() {
         en="NEWS & INSIGHTS"
         title="新闻中心"
         desc="公司动态、行业洞察与项目进展，持续更新。"
-        image="/images/news-1.svg"
+        image={asset('images/news-1.svg')}
         imageAlt="新闻中心页头背景（占位图，可替换）"
         crumbs={[{ label: '首页', path: '/' }, { label: '新闻中心' }]}
       />

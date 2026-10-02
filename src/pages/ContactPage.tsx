@@ -1,5 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { asset } from '../utils/asset'
 import { PageHeader } from '../components/layout/PageHeader'
 import { ContactForm } from '../components/forms/ContactForm'
 import { Reveal } from '../components/ui/Reveal'
@@ -68,7 +69,7 @@ export function ContactPage() {
         en="CONTACT US"
         title="联系我们"
         desc="携手产业伙伴，共创可持续未来。期待与您的每一次交流。"
-        image="/images/contact-banner.svg"
+        image={asset('images/contact-banner.svg')}
         imageAlt="联系我们页头背景（占位图，可替换）"
         crumbs={[{ label: '首页', path: '/' }, { label: '联系我们' }]}
       />
