@@ -11,7 +11,7 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | hero-home.webp / hero-home-m.webp | Unsplash | https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1 | Unsplash 社区作者（页面待补录） | 2026-10-02 | Unsplash License（https://unsplash.com/license） | 首页首屏 Banner（桌面/移动双版本） | 是（焊接作业人员，远景侧影） | 否 | 行业场景示意 | ✅ 已核验内容 | 是（高） |
 | intro-company.webp | Unsplash | https://images.unsplash.com/photo-1581091226825-a6a2a5aee158 | 同上（待补录） | 2026-10-02 | 同上 | 首页企业简介配图 | 是（工程师，中景） | 否 | 行业场景示意 | ✅ 已核验 | 是（高） |
-| about-manufacturing.webp | Unsplash | https://images.unsplash.com/photo-1567789884554-0b844b597180 | 同上（待补录） | 2026-10-02 | 同上 | 关于我们 · 公司简介 | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（高） |
+| about-manufacturing.webp | Unsplash | https://images.unsplash.com/photo-1563968743333-044cef800494 | 同上（待补录） | 2026-10-02 | 同上 | 关于我们 · 公司简介（机械臂自动化产线） | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（高） |
 | about-team.webp | Unsplash | https://images.unsplash.com/photo-1522071820081-009f0129c71c | 同上（待补录） | 2026-10-02 | 同上 | 关于我们 · 团队风貌 | 是（团队人员） | 否 | 行业场景示意（页面已标注非公司人员） | ✅ 已核验 | 是（高） |
 | about-park.webp | Unsplash | https://images.unsplash.com/photo-1473341304170-971dccb5ac1e | 同上（待补录） | 2026-10-02 | 同上 | 关于我们 · 页头 | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（高） |
 | biz-supply-chain-hero.webp | Unsplash | https://images.unsplash.com/photo-1581092335397-9583eb92d232 | 同上（待补录） | 2026-10-02 | 同上 | 具身智能供应链 · 页头与首页卡片 | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（中） |
