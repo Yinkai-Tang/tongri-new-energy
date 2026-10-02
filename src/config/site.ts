@@ -7,6 +7,8 @@
  * ============================================================
  */
 
+import { asset } from '../utils/asset'
+
 export const site = {
   /** 品牌名（导航、页脚、SEO 使用） */
   name: '同日新能源',
@@ -28,12 +30,12 @@ export const site = {
    *   后续拿到官方矢量稿时直接同名覆盖即可。
    */
   brand: {
-    logoWhite: '/brand/tungray-logo-white.svg',
-    logoBlack: '/brand/tungray-logo-black.svg',
-    symbolWhite: '/brand/tungray-symbol-white.svg',
-    symbolBlack: '/brand/tungray-symbol-black.svg',
+    logoWhite: asset('brand/tungray-logo-white.svg'),
+    logoBlack: asset('brand/tungray-logo-black.svg'),
+    symbolWhite: asset('brand/tungray-symbol-white.svg'),
+    symbolBlack: asset('brand/tungray-symbol-black.svg'),
     /** 官方彩色原版（留档，页面不直接使用） */
-    logoColor: '/brand/tungray-logo-color.png',
+    logoColor: asset('brand/tungray-logo-color.png'),
   },
 
   /** ============ 联系方式（来自集团资料，均【待确认】） ============ */
@@ -78,7 +80,7 @@ export const site = {
   },
 
   /** ============ 社交 / 平台 ============ */
-  wechatQr: '/images/qrcode-wechat.svg',
+  wechatQr: asset('images/qrcode-wechat.svg'),
 } as const
 
 /** ============ 顶部导航 ============ */

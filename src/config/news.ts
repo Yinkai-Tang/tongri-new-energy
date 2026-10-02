@@ -13,6 +13,8 @@
  * ============================================================
  */
 
+import { asset } from '../utils/asset'
+
 export type NewsCategory = '公司新闻' | '行业洞察' | '项目动态'
 
 export const newsCategories: ('全部' | NewsCategory)[] = [
@@ -45,7 +47,7 @@ export const news: News[] = [
     source: '同日新能源',
     summary:
       '同日新能源官方网站正式上线，集中展示公司在具身智能供应链、新能源与算力中心三大方向的产业布局与合作价值。',
-    image: '/images/news-1.svg',
+    image: asset('images/news-1.svg'),
     imageAlt: '公司新闻封面：官网正式上线（占位图，可替换）',
     content: [
       '同日新能源官方网站于即日起正式上线。网站围绕「具身智能供应链、新能源、算力中心」三大业务板块，系统展示公司的产业布局、能力体系与合作模式，为产业伙伴、政府与园区合作方、供应商及求职者提供了解我们的窗口。',
@@ -61,7 +63,7 @@ export const news: News[] = [
     source: '同日新能源（编辑整理）',
     summary:
       '从供应链协同到「光储充用」一体化，智能制造与绿色能源正在走向深度融合。本文从产业视角分享我们对融合趋势的观察。',
-    image: '/images/news-2.svg',
+    image: asset('images/news-2.svg'),
     imageAlt: '行业洞察封面：智能制造与绿色能源融合（占位图，可替换）',
     content: [
       '## 制造底座：具身智能产业化的关键变量',
@@ -82,7 +84,7 @@ export const news: News[] = [
     source: '同日新能源',
     summary:
       '项目动态占位条目：用于展示新闻列表与详情页的完整样式，正文请替换为真实项目进展（如开工、并网、交付等节点）。',
-    image: '/images/news-3.svg',
+    image: asset('images/news-3.svg'),
     imageAlt: '项目动态封面（占位图，可替换）',
     content: [
       '本条为项目动态占位内容，用于展示详情页排版样式。正式内容建议包含：项目名称与所在地、建设/交付节点、参与角色（投资 / EPC / 设备供应）、现场图片以及后续计划。',

@@ -16,6 +16,8 @@
  */
 
 /** 业务板块分类（用于筛选） */
+import { asset } from '../utils/asset'
+
 export type ProjectCategory = '具身智能供应链' | '新能源' | '算力中心'
 
 export interface ProjectDetailBlock {
@@ -58,7 +60,7 @@ export const projects: Project[] = [
     location: '项目地点待补充',
     summary:
       '项目简介待补充：建议描述项目背景、建设内容与合作价值，控制在 60 字以内。此处为占位示例，不会展示任何虚构的客户或数据。',
-    image: '/images/project-1.svg',
+    image: asset('images/project-1.svg'),
     imageAlt: '具身智能供应链项目封面（占位图，可替换）',
     detail: {
       background: '项目背景待补充：介绍客户所属行业、面临的发展阶段与本项目的由来。',
@@ -68,8 +70,8 @@ export const projects: Project[] = [
       results: '项目成果待补充：描述交付成果与客户价值（需客户确认后发布）。',
     },
     gallery: [
-      { src: '/images/project-1.svg', alt: '项目图片占位 1（可替换）' },
-      { src: '/images/biz-supply-chain-scene.svg', alt: '项目图片占位 2（可替换）' },
+      { src: asset('images/project-1.svg'), alt: '项目图片占位 1（可替换）' },
+      { src: asset('images/biz-supply-chain-scene.svg'), alt: '项目图片占位 2（可替换）' },
     ],
     pending: true,
   },
@@ -80,7 +82,7 @@ export const projects: Project[] = [
     location: '项目地点待补充',
     summary:
       '项目简介待补充：建议描述项目类型（光伏 / 储能 / 光储一体）、规模量级与应用场景。发布前请替换为经确认的真实项目信息。',
-    image: '/images/project-2.svg',
+    image: asset('images/project-2.svg'),
     imageAlt: '新能源项目封面（占位图，可替换）',
     detail: {
       background: '项目背景待补充：介绍项目所在地区、用能主体与建设缘由。',
@@ -90,8 +92,8 @@ export const projects: Project[] = [
       results: '项目成果待补充：描述运行情况与客户价值（需客户确认后发布）。',
     },
     gallery: [
-      { src: '/images/project-2.svg', alt: '项目图片占位 1（可替换）' },
-      { src: '/images/biz-energy-scene.svg', alt: '项目图片占位 2（可替换）' },
+      { src: asset('images/project-2.svg'), alt: '项目图片占位 1（可替换）' },
+      { src: asset('images/biz-energy-scene.svg'), alt: '项目图片占位 2（可替换）' },
     ],
     pending: true,
   },
@@ -102,7 +104,7 @@ export const projects: Project[] = [
     location: '[待公司确认是否可公开]',
     summary:
       '算力中心 / 数据中心基础设施方向的模块化数据中心方案能力展示。项目状态、系统配置与技术参数均为占位字段，待公司确认后发布。',
-    image: '/images/project-3.svg',
+    image: asset('images/project-3.svg'),
     imageAlt: '模块化数据中心基础设施方案封面（占位图，可替换）',
     detail: {
       background: '[待补充：项目背景与建设目标，需公司确认是否可公开]',
@@ -112,8 +114,8 @@ export const projects: Project[] = [
       results: '[待补充：实施成果。项目状态待确认：规划方案 / 设计方案 / 已签约 / 建设中 / 已交付]',
     },
     gallery: [
-      { src: '/images/project-3.svg', alt: '模块化数据中心方案图片占位 1（可替换）' },
-      { src: '/images/biz-computing-scene.svg', alt: '模块化数据中心方案图片占位 2（可替换）' },
+      { src: asset('images/project-3.svg'), alt: '模块化数据中心方案图片占位 1（可替换）' },
+      { src: asset('images/biz-computing-scene.svg'), alt: '模块化数据中心方案图片占位 2（可替换）' },
     ],
     pending: true,
   },
@@ -124,7 +126,7 @@ export const projects: Project[] = [
     location: '项目地点待补充',
     summary:
       '项目简介待补充：建议描述项目类型、规模量级与合作模式（投资 / EPC / 设备供应），发布前替换为真实项目。',
-    image: '/images/project-4.svg',
+    image: asset('images/project-4.svg'),
     imageAlt: '综合产业项目封面（占位图，可替换）',
     detail: {
       background: '项目背景待补充：介绍项目主体与合作模式。',
@@ -134,8 +136,8 @@ export const projects: Project[] = [
       results: '项目成果待补充：描述项目价值（需确认后发布）。',
     },
     gallery: [
-      { src: '/images/project-4.svg', alt: '项目图片占位 1（可替换）' },
-      { src: '/images/biz-energy-hero.svg', alt: '项目图片占位 2（可替换）' },
+      { src: asset('images/project-4.svg'), alt: '项目图片占位 1（可替换）' },
+      { src: asset('images/biz-energy-hero.svg'), alt: '项目图片占位 2（可替换）' },
     ],
     pending: true,
   },

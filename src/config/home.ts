@@ -7,6 +7,8 @@
  */
 
 /** 首屏 Banner */
+import { asset } from '../utils/asset'
+
 export const hero = {
   /** 主标题 */
   title: '以产业协同，驱动绿色未来',
@@ -14,7 +16,7 @@ export const hero = {
   subtitle:
     '聚焦具身智能供应链、新能源与算力中心，构建面向未来的产业能力。',
   /** 背景）（1920×1080，public/images/hero-home.svg） */
-  image: '/images/hero-home.svg',
+  image: asset('images/hero-home.svg'),
   imageAlt: '智能工厂与绿色能源产业场景主视觉（占位图，可替换）',
   ctas: {
     primary: { label: '了解同日新能源', path: '/about' },
@@ -51,7 +53,7 @@ export const intro = {
     '我们相信，产业协同是驱动长期价值的核心。以制造为根基、以技术为纽带、以绿色为方向，同日新能源愿与客户和伙伴共同成长。',
     // ↑ 简介文案为占位撰写，发布前请按公司审定口径修改。
   ],
-  image: '/images/intro-company.svg',
+  image: asset('images/intro-company.svg'),
   imageAlt: '同日新能源产业园区（占位图，可替换）',
   cta: { label: '了解更多', path: '/about' },
 }

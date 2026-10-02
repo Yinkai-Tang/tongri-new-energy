@@ -8,6 +8,8 @@
  * ============================================================
  */
 
+import { asset } from '../utils/asset'
+
 export interface Capability {
   title: string
   desc: string
@@ -60,7 +62,7 @@ export const businesses: Business[] = [
     summary:
       '依托集团三十余年智能制造产业基础，聚焦机器人核心零部件、精密驱动与电控系统的供应链整合与制造交付，为具身智能产业化提供可靠的制造底座。',
     index: '01',
-    image: '/images/biz-supply-chain-hero.svg',
+    image: asset('images/biz-supply-chain-hero.svg'),
     imageAlt: '自动化产线与机器人零部件（占位图，可替换）',
     theme: 'accent',
     positioning: [
@@ -139,7 +141,7 @@ export const businesses: Business[] = [
     summary:
       '依托集团在动力电池与储能系统领域的技术与制造积淀，围绕「光伏 + 储能 + 能源管理」提供覆盖户用、工商业与园区的绿色能源产品与解决方案。',
     index: '02',
-    image: '/images/biz-energy-hero.svg',
+    image: asset('images/biz-energy-hero.svg'),
     imageAlt: '光伏电站、风机与储能系统（占位图，可替换）',
     theme: 'energy',
     positioning: [
@@ -217,7 +219,7 @@ export const businesses: Business[] = [
     summary:
       '面向 AI 算力、高性能计算与企业数字化需求，提供模块化数据中心及算力基础设施解决方案，连接算力需求与基础设施能力。',
     index: '03',
-    image: '/images/biz-computing-hero.svg',
+    image: asset('images/biz-computing-hero.svg'),
     imageAlt: '模块化数据中心机房与机柜阵列示意（占位图，可替换）',
     theme: 'accent',
     positioning: [
