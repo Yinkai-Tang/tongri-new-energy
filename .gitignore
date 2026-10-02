@@ -1,0 +1,19 @@
+# 依赖
+node_modules
+
+# 构建产物（由 GitHub Actions 在部署时构建）
+dist
+
+# 本地环境文件
+*.local
+.env
+
+# 编辑器与系统文件
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# TypeScript 增量缓存
+*.tsbuildinfo

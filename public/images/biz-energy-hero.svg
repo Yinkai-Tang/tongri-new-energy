@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg-energy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1628"/>
+      <stop offset="0.55" stop-color="#122036"/>
+      <stop offset="1" stop-color="#060D1A"/>
+    </linearGradient>
+    <radialGradient id="glow-b-energy" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2E9BFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2E9BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-g-energy" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#34D08C" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#34D08C" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-energy" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#24405F" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg-energy)"/>
+  <rect width="1600" height="1000" fill="url(#grid-energy)" opacity="0.5"/>
+  <rect x="0" y="996" width="1600" height="4" fill="#2E9BFF" opacity="0.7"/><ellipse cx="1280" cy="220" rx="400" ry="288" fill="url(#glow-g-energy)"/><ellipse cx="300" cy="260" rx="340" ry="244.79999999999998" fill="url(#glow-b-energy)"/>
+  <g transform="translate(1280 220)">
+    <circle r="78" fill="none" stroke="#34D08C" stroke-opacity="0.35" stroke-width="2"/>
+    <circle r="56.16" fill="none" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+    <circle r="31.200000000000003" fill="#34D08C" opacity="0.85"/>
+    <line x1="89.69999999999999" y1="0" x2="113.1" y2="0" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="77.68247871946414" y1="44.84999999999999" x2="97.94747316802001" y2="56.54999999999999" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="44.85" y1="77.68247871946414" x2="56.55000000000001" y2="97.94747316802001" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="5.492540894175879e-15" y1="89.69999999999999" x2="6.9253776491782824e-15" y2="113.1" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="-44.84999999999998" y1="77.68247871946414" x2="-56.549999999999976" y2="97.94747316802001" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="-77.68247871946414" y1="44.84999999999999" x2="-97.94747316802001" y2="56.54999999999999" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="-89.69999999999999" y1="1.0985081788351758e-14" x2="-113.1" y2="1.3850755298356565e-14" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="-77.68247871946414" y1="-44.85" x2="-97.94747316802001" y2="-56.55000000000001" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="-44.85000000000004" y1="-77.68247871946413" x2="-56.55000000000005" y2="-97.94747316802" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="-1.6477622682527635e-14" y1="-89.69999999999999" x2="-2.0776132947534846e-14" y2="-113.1" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="44.85" y1="-77.68247871946414" x2="56.55000000000001" y2="-97.94747316802001" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/><line x1="77.68247871946411" y1="-44.85000000000004" x2="97.94747316801997" y2="-56.55000000000005" stroke="#34D08C" stroke-opacity="0.5" stroke-width="3"/>
+  </g>
+  <g transform="translate(240 880)" stroke="#7CC4FF" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="-360" stroke-width="10"/>
+    <g transform="translate(0 -360)">
+      <circle r="12" fill="#122036" stroke-width="8"/>
+      <g stroke-width="9">
+        <line x1="0" y1="0" x2="0" y2="-96"/>
+        <line x1="0" y1="0" x2="84" y2="48"/>
+        <line x1="0" y1="0" x2="-84" y2="48"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(440 890)" stroke="#7CC4FF" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="-260" stroke-width="10"/>
+    <g transform="translate(0 -260)">
+      <circle r="12" fill="#122036" stroke-width="8"/>
+      <g stroke-width="9">
+        <line x1="0" y1="0" x2="0" y2="-96"/>
+        <line x1="0" y1="0" x2="84" y2="48"/>
+        <line x1="0" y1="0" x2="-84" y2="48"/>
+      </g>
+    </g>
+  </g><g transform="translate(620 640) scale(1.5)">
+    <g transform="translate(0 60) rotate(-17.188733853924695)">
+      <rect x="0" y="0" width="150" height="92" fill="#122036" stroke="#34D08C" stroke-width="3"/>
+      <line x1="0" y1="30.666666666666668" x2="150" y2="30.666666666666668" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="0" y1="61.333333333333336" x2="150" y2="61.333333333333336" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="37.5" y1="0" x2="37.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="75" y1="0" x2="75" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="112.5" y1="0" x2="112.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="75" y1="92" x2="61" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+      <line x1="61" y1="136" x2="89" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+    </g>
+    <g transform="translate(170 30) rotate(-17.188733853924695)">
+      <rect x="0" y="0" width="150" height="92" fill="#122036" stroke="#34D08C" stroke-width="3"/>
+      <line x1="0" y1="30.666666666666668" x2="150" y2="30.666666666666668" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="0" y1="61.333333333333336" x2="150" y2="61.333333333333336" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="37.5" y1="0" x2="37.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="75" y1="0" x2="75" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="112.5" y1="0" x2="112.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="75" y1="92" x2="61" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+      <line x1="61" y1="136" x2="89" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+    </g>
+    <g transform="translate(340 0) rotate(-17.188733853924695)">
+      <rect x="0" y="0" width="150" height="92" fill="#122036" stroke="#34D08C" stroke-width="3"/>
+      <line x1="0" y1="30.666666666666668" x2="150" y2="30.666666666666668" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="0" y1="61.333333333333336" x2="150" y2="61.333333333333336" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="37.5" y1="0" x2="37.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="75" y1="0" x2="75" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="112.5" y1="0" x2="112.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="75" y1="92" x2="61" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+      <line x1="61" y1="136" x2="89" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+    </g>
+    <g transform="translate(85 150) rotate(-17.188733853924695)">
+      <rect x="0" y="0" width="150" height="92" fill="#122036" stroke="#34D08C" stroke-width="3"/>
+      <line x1="0" y1="30.666666666666668" x2="150" y2="30.666666666666668" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="0" y1="61.333333333333336" x2="150" y2="61.333333333333336" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="37.5" y1="0" x2="37.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="75" y1="0" x2="75" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="112.5" y1="0" x2="112.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="75" y1="92" x2="61" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+      <line x1="61" y1="136" x2="89" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+    </g>
+    <g transform="translate(255 120) rotate(-17.188733853924695)">
+      <rect x="0" y="0" width="150" height="92" fill="#122036" stroke="#34D08C" stroke-width="3"/>
+      <line x1="0" y1="30.666666666666668" x2="150" y2="30.666666666666668" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="0" y1="61.333333333333336" x2="150" y2="61.333333333333336" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="37.5" y1="0" x2="37.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="75" y1="0" x2="75" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/><line x1="112.5" y1="0" x2="112.5" y2="92" stroke="#34D08C" stroke-opacity="0.6" stroke-width="2"/>
+      <line x1="75" y1="92" x2="61" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+      <line x1="61" y1="136" x2="89" y2="136" stroke="#5D7BA3" stroke-width="6"/>
+    </g></g>
+  <path d="M -30 940 C 480 850, 1050 990, 1640 880" fill="none" stroke="#34D08C" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M -30 940 C 480 850, 1050 990, 1640 880" fill="none" stroke="#34D08C" stroke-opacity="0.5" stroke-width="2"
+    stroke-dasharray="14 106" stroke-linecap="round"/>
+  <g transform="translate(28 976)">
+    <rect x="0" y="-24" width="527" height="34" rx="4" fill="#060D1A" opacity="0.72"/>
+    <text x="14" y="0" font-family="Consolas, monospace" font-size="17" fill="#2E9BFF" opacity="0.9">IMG-007</text>
+    <text x="113" y="0" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#B9C7DA" opacity="0.85">新能源 · 光伏/风电/储能电站实景 · 占位图可替换</text>
+  </g>
+  <g transform="translate(1572 28)" stroke="#5D7BA3" stroke-width="2" opacity="0.5">
+    <line x1="-46" y1="0" x2="0" y2="0"/><line x1="0" y1="0" x2="0" y2="46"/>
+  </g></svg>

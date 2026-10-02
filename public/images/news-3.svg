@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg-img-017" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1628"/>
+      <stop offset="0.55" stop-color="#122036"/>
+      <stop offset="1" stop-color="#060D1A"/>
+    </linearGradient>
+    <radialGradient id="glow-b-img-017" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2E9BFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2E9BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-g-img-017" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#34D08C" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#34D08C" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-img-017" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#24405F" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg-img-017)"/>
+  <rect width="1600" height="1000" fill="url(#grid-img-017)" opacity="0.5"/>
+  <rect x="0" y="996" width="1600" height="4" fill="#2E9BFF" opacity="0.7"/><ellipse cx="500" cy="300" rx="360" ry="259.2" fill="url(#glow-b-img-017)"/><ellipse cx="1150" cy="320" rx="340" ry="244.79999999999998" fill="url(#glow-g-img-017)"/>
+  <g transform="translate(200 640)">
+    <rect x="0" y="0" width="380" height="180" rx="6" fill="#122036" stroke="#34D08C" stroke-width="3"/>
+    <line x1="22" y1="18" x2="22" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="56" y1="18" x2="56" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="90" y1="18" x2="90" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="124" y1="18" x2="124" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="158" y1="18" x2="158" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="192" y1="18" x2="192" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="226" y1="18" x2="226" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="260" y1="18" x2="260" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="294" y1="18" x2="294" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/><line x1="328" y1="18" x2="328" y2="162" stroke="#34D08C" stroke-opacity="0.4" stroke-width="4"/>
+    <rect x="10" y="146" width="360" height="6" fill="#34D08C" opacity="0.7"/>
+    <circle cx="354" cy="26" r="7" fill="#34D08C"/>
+  </g>
+  <g transform="translate(900 860) scale(1.2)" fill="none" stroke="#2E9BFF" stroke-width="10" stroke-linecap="round">
+    <circle cx="0" cy="0" r="34" fill="#122036" stroke-width="8"/>
+    <path d="M 0 0 L 95 -85"/>
+    <circle cx="95" cy="-85" r="16" fill="#122036" stroke-width="8"/>
+    <path d="M 95 -85 L 175 -55 L 225 -120"/>
+    <circle cx="225" cy="-120" r="11" fill="#122036" stroke-width="8"/>
+    <path d="M 225 -120 L 252 -158 M 225 -120 L 258 -104 M 225 -120 L 240 -88"/>
+  </g>
+  <g transform="translate(1380 860)" stroke="#8AE6BD" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="-200" stroke-width="10"/>
+    <g transform="translate(0 -200)">
+      <circle r="12" fill="#122036" stroke-width="8"/>
+      <g stroke-width="9">
+        <line x1="0" y1="0" x2="0" y2="-96"/>
+        <line x1="0" y1="0" x2="84" y2="48"/>
+        <line x1="0" y1="0" x2="-84" y2="48"/>
+      </g>
+    </g>
+  </g>
+  <path d="M -30 900 C 480 820, 1050 960, 1640 850" fill="none" stroke="#2E9BFF" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M -30 900 C 480 820, 1050 960, 1640 850" fill="none" stroke="#2E9BFF" stroke-opacity="0.5" stroke-width="2"
+    stroke-dasharray="14 106" stroke-linecap="round"/>
+  <g transform="translate(28 976)">
+    <rect x="0" y="-24" width="483" height="34" rx="4" fill="#060D1A" opacity="0.72"/>
+    <text x="14" y="0" font-family="Consolas, monospace" font-size="17" fill="#2E9BFF" opacity="0.9">IMG-017</text>
+    <text x="113" y="0" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#B9C7DA" opacity="0.85">新闻封面 · 项目动态（可替换） · 占位图可替换</text>
+  </g>
+  <g transform="translate(1572 28)" stroke="#5D7BA3" stroke-width="2" opacity="0.5">
+    <line x1="-46" y1="0" x2="0" y2="0"/><line x1="0" y1="0" x2="0" y2="46"/>
+  </g></svg>

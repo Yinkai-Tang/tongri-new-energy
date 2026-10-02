@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg-img-015" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1628"/>
+      <stop offset="0.55" stop-color="#122036"/>
+      <stop offset="1" stop-color="#060D1A"/>
+    </linearGradient>
+    <radialGradient id="glow-b-img-015" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2E9BFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2E9BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-g-img-015" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#34D08C" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#34D08C" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-img-015" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#24405F" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg-img-015)"/>
+  <rect width="1600" height="1000" fill="url(#grid-img-015)" opacity="0.5"/>
+  <rect x="0" y="996" width="1600" height="4" fill="#2E9BFF" opacity="0.7"/><ellipse cx="800" cy="320" rx="400" ry="288" fill="url(#glow-b-img-015)"/><g transform="translate(800 420)" stroke="#2E9BFF" stroke-width="6" fill="#122036">
+     <rect x="-170" y="-110" width="340" height="220" rx="14"/>
+     <line x1="-120" y1="-60" x2="60" y2="-60" stroke-opacity="0.8"/>
+     <line x1="-120" y1="-10" x2="120" y2="-10" stroke-opacity="0.5"/>
+     <line x1="-120" y1="40" x2="90" y2="40" stroke-opacity="0.5"/>
+   </g>
+  <path d="M -30 780 C 480 700, 1050 840, 1640 730" fill="none" stroke="#2E9BFF" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M -30 780 C 480 700, 1050 840, 1640 730" fill="none" stroke="#2E9BFF" stroke-opacity="0.5" stroke-width="2"
+    stroke-dasharray="14 106" stroke-linecap="round"/>
+  <g transform="translate(28 976)">
+    <rect x="0" y="-24" width="483" height="34" rx="4" fill="#060D1A" opacity="0.72"/>
+    <text x="14" y="0" font-family="Consolas, monospace" font-size="17" fill="#2E9BFF" opacity="0.9">IMG-015</text>
+    <text x="113" y="0" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#B9C7DA" opacity="0.85">新闻封面 · 公司动态（可替换） · 占位图可替换</text>
+  </g>
+  <g transform="translate(1572 28)" stroke="#5D7BA3" stroke-width="2" opacity="0.5">
+    <line x1="-46" y1="0" x2="0" y2="0"/><line x1="0" y1="0" x2="0" y2="46"/>
+  </g></svg>

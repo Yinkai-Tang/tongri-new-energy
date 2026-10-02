@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ 全局基础 ============ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* 固定导航高度补偿：浏览器聚焦/锚点滚动时元素不会被导航遮住 */
+    scroll-padding-top: 96px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-navy-950 text-slate-300 font-sans;
+  }
+
+  ::selection {
+    @apply bg-accent/40 text-white;
+  }
+
+  /* 滚动条（桌面端） */
+  @media (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b1628;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #28405f;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3a567e;
+    }
+  }
+}
+
+/* ============ 通用组件类 ============ */
+@layer components {
+  /* 页面内容容器 */
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 md:px-8;
+  }
+
+  /* 区块标题组合 */
+  .section-en {
+    @apply text-xs font-medium uppercase tracking-widest2 text-accent;
+  }
+  .section-title {
+    @apply mt-3 text-2xl font-bold text-white md:text-4xl;
+  }
+
+  /* 卡片 */
+  .card-dark {
+    @apply border border-white/5 bg-white/[0.03] transition-colors duration-300;
+  }
+  .card-dark-hover {
+    @apply hover:border-accent/40 hover:bg-white/[0.06];
+  }
+
+  /* 主按钮 / 次按钮 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 border border-accent/60 bg-accent/15 px-7 py-3
+      text-sm font-medium text-accent-soft transition-all duration-300
+      hover:bg-accent hover:text-white;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-white/20 px-7 py-3
+      text-sm font-medium text-slate-200 transition-all duration-300
+      hover:border-white/60 hover:text-white;
+  }
+
+  /* 玻璃质感深色导航 */
+  .glass-nav {
+    @apply bg-navy-950/85 backdrop-blur-md border-b border-white/5;
+  }
+
+  /* 角标装饰线（工业感） */
+  .corner-frame {
+    @apply relative;
+  }
+  .corner-frame::before,
+  .corner-frame::after {
+    content: '';
+    @apply pointer-events-none absolute h-4 w-4 border-accent/50 transition-all duration-300;
+  }
+  .corner-frame::before {
+    @apply left-0 top-0 border-l border-t;
+  }
+  .corner-frame::after {
+    @apply bottom-0 right-0 border-b border-r;
+  }
+}
+
+/* ============ 背景纹理 ============ */
+@layer utilities {
+  /* 科技网格背景 */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(46, 155, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(46, 155, 255, 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* 深色区块渐变 */
+  .bg-section-dark {
+    background: linear-gradient(180deg, #060d1a 0%, #0b1628 60%, #060d1a 100%);
+  }
+
+  /* 滚动进入动画（配合 Reveal 组件） */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
