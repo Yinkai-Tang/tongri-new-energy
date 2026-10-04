@@ -3,44 +3,27 @@ import { site } from '../../config/site'
 import { Reveal } from './Reveal'
 
 /**
- * 品牌 Logo 组件（全站唯一 Logo 入口，勿在页面内手动放 Logo）：
- * - 使用官方 Tungray 横版单色资产，完整比例 object-contain，禁止拉伸/裁切/加效果；
- * - variant='white'（默认）：深蓝/黑/深灰背景的 Header、Footer 与深色页面；
- * - variant='black'：白/浅灰背景页面及打印（未来若引入浅色页头自动切换即改此参数）；
- * - 主体名称以普通文字形式置于 Logo 旁，不参与 Logo 图形。
+ * 品牌 Logo 组件（全站唯一 Logo 入口，Header/Footer/移动端统一引用）：
+ * - 使用官方 Tungray 彩色透明底横版 Logo，完整比例 object-contain；
+ * - 禁止拉伸、裁切、模糊、反白、发光、描边、渐变等任何处理；
+ * - 主体名称"上海同日新能源技术有限公司"以普通文字呈现在 Logo 旁，
+ *   不与 Logo 合成，字号小于 Logo 字标；英文名未确认前不显示；
+ * - 未来公司提供单色版官方文件后，可在本组件内按页头底色切换。
  */
-export function BrandLogo({
-  compact = false,
-  variant = 'white',
-}: {
-  compact?: boolean
-  variant?: 'white' | 'black'
-}) {
-  const src = variant === 'black' ? site.brand.logoBlack : site.brand.logoWhite
+export function BrandLogo({ compact = false }: { compact?: boolean }) {
   return (
-    <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="同日集团 TUNGRAY">
+    <Link to="/" className="flex shrink-0 items-center gap-4" aria-label="Tungray 同日集团">
       <img
-        src={src}
-        alt="同日集团 TUNGRAY"
+        src={site.brand.logo}
+        alt={site.brand.alt}
         className="h-7 w-auto object-contain md:h-9"
-        width={355}
-        height={81}
+        width={457}
+        height={89}
       />
       {!compact && (
         <span className="flex flex-col leading-tight">
-          <span
-            className={`text-xs font-medium transition-colors duration-300 ${
-              variant === 'black' ? 'text-ink' : 'text-white'
-            }`}
-          >
+          <span className="text-[15px] font-medium text-slate-100">
             {site.fullName}
-          </span>
-          <span
-            className={`mt-0.5 text-[9px] uppercase tracking-wide transition-colors duration-300 ${
-              variant === 'black' ? 'text-ink-mute' : 'text-slate-500'
-            }`}
-          >
-            {site.fullNameEn}
           </span>
         </span>
       )}

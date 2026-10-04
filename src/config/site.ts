@@ -14,7 +14,7 @@ export const site = {
   name: '同日新能源',
   /** 公司全称【待确认：以公司最终对外主体名称为准】 */
   fullName: '上海同日新能源技术有限公司',
-  fullNameEn: '[Company English Name — To Be Confirmed]',
+  fullNameEn: '', // 英文主体名称未确认：确认前任何页面不得显示
   /** 集团名称（关于我们/页脚使用） */
   groupName: '同日集团',
   groupNameEn: 'Tungray Group',
@@ -22,22 +22,16 @@ export const site = {
   slogan: '未来同创享',
   sloganEn: 'We Create, We Share',
   /**
-   * 品牌资产（官方 Tungray Logo，单色透明底）
-   * 目录：public/brand/ —— 全站统一经 BrandLogo 组件引用，勿在页面内手动放置
-   * 白色版：深蓝/黑/深灰背景（Header、Footer、深色页面）
-   * 黑色版：白/浅灰背景与打印场景（当前站点暂无浅色页头，接入时传 variant='black'）
-   * PNG 为原始分辨率（355×81，页头显示约 2.5x）；SVG 为内嵌 PNG 的自包含包装，
-   *   后续拿到官方矢量稿时直接同名覆盖即可。
+   * 品牌资产（官方 Tungray 彩色透明底 Logo）
+   * 目录：public/brand/ —— 全站统一经 BrandLogo 组件引用，勿在页面内手动放置。
+   * 白色/黑色单色版待公司提供 SVG/AI/EPS/PDF 原始文件后再制作。
    */
   brand: {
-    logoWhite: asset('brand/tungray-logo-white.svg'),
-    logoBlack: asset('brand/tungray-logo-black.svg'),
-    symbolWhite: asset('brand/tungray-symbol-white.svg'),
-    symbolBlack: asset('brand/tungray-symbol-black.svg'),
-    /** 官方彩色原版（留档，页面不直接使用） */
-    logoColor: asset('brand/tungray-logo-color.png'),
+    /** 彩色透明底横版 Logo（深色页头当前临时方案） */
+    logo: '/brand/tungray-logo-color-transparent.png',
+    /** Logo 替代文本（全站统一） */
+    alt: 'Tungray 同日集团',
   },
-
   /** ============ 联系方式（来自集团资料，均【待确认】） ============ */
   contact: {
     /** 商务咨询电话 */

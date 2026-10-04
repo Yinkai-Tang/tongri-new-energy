@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { navItems, site, footerLegalLinks } from '../../config/site'
+import { BrandLogo } from '../ui/SectionTitle'
 import { businesses } from '../../config/businesses'
 
 /** 页脚：品牌信息 / 快速导航 / 业务板块 / 联系方式 / 公众号 / 法务 */
@@ -17,17 +18,8 @@ export function Footer() {
       <div className="container-content grid grid-cols-1 gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         {/* 品牌 */}
         <div>
-          <div className="flex items-center gap-3">
-            <img
-              src={site.brand.logoWhite}
-              alt="同日集团 TUNGRAY"
-              className="h-10 w-auto object-contain"
-              width={355}
-              height={81}
-            />
-            <span className="border-l border-white/10 pl-3 text-sm font-medium text-white">
-              {site.fullName}
-            </span>
+          <div className="flex items-center [&_img]:h-10">
+            <BrandLogo compact />
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
             聚焦具身智能供应链、新能源与算力中心，以产业协同驱动绿色未来。
