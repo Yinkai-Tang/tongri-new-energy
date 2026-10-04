@@ -25,6 +25,9 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
           <span className="text-[15px] font-medium text-slate-100">
             {site.fullName}
           </span>
+          <span className="mt-0.5 text-[9px] uppercase tracking-wide text-slate-500">
+            {site.fullNameEn}
+          </span>
         </span>
       )}
     </Link>

@@ -14,7 +14,7 @@ export const site = {
   name: '同日新能源',
   /** 公司全称【待确认：以公司最终对外主体名称为准】 */
   fullName: '上海同日新能源技术有限公司',
-  fullNameEn: '', // 英文主体名称未确认：确认前任何页面不得显示
+  fullNameEn: 'Shanghai Tungray Green Energy Technology Co., Ltd.',
   /** 集团名称（关于我们/页脚使用） */
   groupName: '同日集团',
   groupNameEn: 'Tungray Group',
@@ -56,7 +56,7 @@ export const site = {
     icp: '沪ICP备XXXXXXXX号',
     /** 公安备案【占位，可留空不显示】 */
     police: '',
-    copyright: `© ${new Date().getFullYear()} 同日新能源 · 同日绿电新能科技有限公司`,
+    copyright: `© ${new Date().getFullYear()} 同日新能源 · 上海同日新能源技术有限公司`,
   },
 
   /** ============ 表单与咨询文案 ============ */
