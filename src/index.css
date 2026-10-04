@@ -19,6 +19,12 @@
     @apply bg-accent/40 text-white;
   }
 
+  :focus-visible {
+    outline: 2px solid rgba(46, 155, 255, 0.75);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
   /* 滚动条（桌面端） */
   @media (pointer: fine) {
     ::-webkit-scrollbar {
@@ -133,5 +139,44 @@
     html {
       scroll-behavior: auto;
     }
+  }
+}
+
+/* ============ 精修细节 ============ */
+@layer utilities {
+  /* 极低透明度胶片颗粒（仅氛围，不影响文字清晰度与交互） */
+  .grain-overlay::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+    opacity: 0.028;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 240px 240px;
+  }
+
+  /* 图库摄影统一品牌调色：收饱和、提对比、压亮度，融入深蓝体系 */
+  .img-brand {
+    filter: saturate(0.88) contrast(1.05) brightness(0.97);
+  }
+
+  /* 展示型数字 */
+  .nums-display {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  /* 首屏入场（load 一次性，尊重减少动态设置） */
+  .hero-in {
+    opacity: 0;
+    animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes hero-in {
+    from { opacity: 0; transform: translateY(26px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-in { animation: none; opacity: 1; transform: none; }
   }
 }

@@ -10,7 +10,7 @@ import { Icon } from '../ui/Icon'
  */
 export function BusinessSection() {
   return (
-    <section className="bg-navy-900/40 py-20 md:py-28">
+    <section className="bg-navy-900/40 py-24 md:py-32">
       <div className="container-content">
         <SectionTitle
           en="OUR BUSINESS"
@@ -31,7 +31,7 @@ export function BusinessSection() {
                   <img
                     src={b.image}
                     alt={b.imageAlt}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="img-brand h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />

@@ -25,7 +25,7 @@ export function BusinessPage() {
         crumbs={[{ label: '首页', path: '/' }, { label: '业务板块' }]}
       />
 
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content space-y-8">
           {businesses.map((b, i) => (
             <Reveal key={b.slug} delay={i * 60}>

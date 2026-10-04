@@ -10,7 +10,7 @@ import { businesses } from '../../config/businesses'
  */
 export function SynergySection() {
   return (
-    <section className="relative overflow-hidden bg-section-dark py-20 md:py-28">
+    <section className="relative overflow-hidden bg-section-dark py-24 md:py-32">
       <div className="absolute inset-0 bg-grid opacity-40" />
       <div className="container-content relative">
         <div className="mx-auto max-w-2xl text-center">

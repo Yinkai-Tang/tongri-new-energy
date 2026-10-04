@@ -13,7 +13,7 @@ const bizIcons = ['chip', 'solar', 'server']
  */
 export function ApplicationScenariosSection() {
   return (
-    <section className="bg-navy-900/40 py-20 md:py-28">
+    <section className="bg-navy-900/40 py-24 md:py-32">
       <div className="container-content">
         <SectionTitle
           en="APPLICATION SCENARIOS"

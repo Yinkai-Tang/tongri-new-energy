@@ -26,7 +26,7 @@ export function AboutPage() {
       />
 
       {/* 公司简介 */}
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content grid items-center gap-12 lg:grid-cols-2">
           <div>
             <Reveal>
@@ -42,7 +42,7 @@ export function AboutPage() {
           <Reveal delay={150}>
             <figure className="group relative">
               <span className="corner-frame absolute -left-3 -top-3 h-full w-full" aria-hidden="true" />
-              <img src={about.profile.image} alt={about.profile.imageAlt} className="aspect-[16/10] w-full object-cover" loading="lazy" />
+              <img src={about.profile.image} alt={about.profile.imageAlt} className="img-brand aspect-[16/10] w-full object-cover" loading="lazy" />
               <span className="absolute -bottom-1 left-0 h-[3px] w-24 bg-gradient-to-r from-accent to-energy" />
             </figure>
           </Reveal>
@@ -50,7 +50,7 @@ export function AboutPage() {
       </section>
 
       {/* 使命 · 愿景 · 价值观 */}
-      <section className="bg-navy-900/40 py-20 md:py-24">
+      <section className="bg-navy-900/40 py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="MISSION · VISION · VALUES" title={about.mvv.title} />
           <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -71,7 +71,7 @@ export function AboutPage() {
       </section>
 
       {/* 集团背景 · 产业基础 */}
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="GROUP BACKGROUND" title={about.group.title} desc={about.group.desc} />
           <div className="mt-14 grid gap-5 md:grid-cols-2">
@@ -93,7 +93,7 @@ export function AboutPage() {
       </section>
 
       {/* 发展历程 Timeline */}
-      <section className="bg-section-dark py-20 md:py-24">
+      <section className="bg-section-dark py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="MILESTONES" title={about.timeline.title} desc={about.timeline.desc} />
 
@@ -125,12 +125,12 @@ export function AboutPage() {
       </section>
 
       {/* 企业文化 · 团队风貌 */}
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <figure className="group relative">
               <span className="corner-frame absolute -left-3 -top-3 h-full w-full" aria-hidden="true" />
-              <img src={about.culture.image} alt={about.culture.imageAlt} className="aspect-[16/10] w-full object-cover" loading="lazy" />
+              <img src={about.culture.image} alt={about.culture.imageAlt} className="img-brand aspect-[16/10] w-full object-cover" loading="lazy" />
               <span className="absolute -bottom-1 left-0 h-[3px] w-24 bg-gradient-to-r from-energy to-accent" />
             </figure>
           </Reveal>
@@ -154,7 +154,7 @@ export function AboutPage() {
       </section>
 
       {/* 可持续发展 ESG */}
-      <section className="bg-navy-900/40 py-20 md:py-24">
+      <section className="bg-navy-900/40 py-24 md:py-32">
         <div className="container-content">
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
             <Reveal>

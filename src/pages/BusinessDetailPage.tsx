@@ -46,7 +46,7 @@ export function BusinessDetailPage() {
       />
 
       {/* 板块定位 */}
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
             <Reveal>
@@ -69,7 +69,7 @@ export function BusinessDetailPage() {
       </section>
 
       {/* 服务 / 能力范围 */}
-      <section className="bg-navy-900/40 py-20 md:py-24">
+      <section className="bg-navy-900/40 py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="CAPABILITIES" title="服务与能力范围" />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -89,7 +89,7 @@ export function BusinessDetailPage() {
       </section>
 
       {/* 流程图 */}
-      <section className="bg-section-dark relative py-20 md:py-24">
+      <section className="bg-section-dark relative py-24 md:py-32">
         <div className="absolute inset-0 bg-grid opacity-30" aria-hidden="true" />
         <div className="container-content relative">
           <SectionTitle en="PROCESS" title={biz.processTitle} />
@@ -132,7 +132,7 @@ export function BusinessDetailPage() {
       </section>
 
       {/* 应用场景 */}
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="APPLICATIONS" title="应用场景" />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -150,7 +150,7 @@ export function BusinessDetailPage() {
       </section>
 
       {/* 合作方式（承接原"相关案例"栏目位置；案例栏目待有真实案例后启用） */}
-      <section className="bg-navy-900/40 py-20 md:py-24">
+      <section className="bg-navy-900/40 py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="COOPERATION" title="合作方式" desc="围绕项目全周期，我们支持以下合作方式，具体范围以双方沟通为准。" />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -175,7 +175,7 @@ export function BusinessDetailPage() {
       </section>
 
       {/* 合作咨询 CTA + 其他板块 */}
-      <section className="bg-navy-950 py-20 md:py-24">
+      <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content grid gap-6 lg:grid-cols-3">
           <Reveal className="lg:col-span-2">
             <div className="relative flex h-full flex-col justify-center overflow-hidden border border-white/5 bg-gradient-to-br from-navy-900 to-navy-950 p-10">

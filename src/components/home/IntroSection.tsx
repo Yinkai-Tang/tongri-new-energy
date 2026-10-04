@@ -7,7 +7,7 @@ import { Icon } from '../ui/Icon'
 /** 首页模块一：企业简介概览 */
 export function IntroSection() {
   return (
-    <section className="relative bg-navy-950 py-20 md:py-28">
+    <section className="relative bg-navy-950 py-24 md:py-32">
       <div className="container-content">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* 文案 */}
@@ -36,7 +36,7 @@ export function IntroSection() {
               <img
                 src={intro.image}
                 alt={intro.imageAlt}
-                className="aspect-[4/3] w-full object-cover"
+                className="img-brand aspect-[4/3] w-full object-cover"
                 loading="lazy"
               />
               <figcaption className="absolute bottom-0 left-0 bg-navy-950/85 px-4 py-2 text-[11px] text-slate-500 backdrop-blur-sm">

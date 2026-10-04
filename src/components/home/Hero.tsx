@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom'
 import { hero, heroStats } from '../../config/home'
+import { useCountUp } from '../../hooks/useCountUp'
 import { Icon } from '../ui/Icon'
+
+function StatItem({ value, unit, label }: { value: string; unit?: string; label: string }) {
+  const { ref, display } = useCountUp(value)
+  return (
+    <div className="flex flex-col">
+      <dd ref={ref as never} className="nums-display order-1 text-2xl font-semibold text-white md:text-3xl">
+        {display}
+        {unit && <span className="ml-0.5 text-base font-medium text-accent-soft">{unit}</span>}
+      </dd>
+      <dt className="order-2 mt-1.5 text-xs text-slate-400 md:text-[13px]">{label}</dt>
+    </div>
+  )
+}
 
 /**
  * 首屏 Banner：
@@ -18,7 +32,7 @@ export function Hero() {
           <img
             src={hero.image}
             alt={hero.imageAlt}
-            className="h-full w-full object-cover"
+            className="img-brand h-full w-full object-cover"
             fetchPriority="high"
           />
         </picture>
@@ -33,17 +47,17 @@ export function Hero() {
 
       {/* 主内容 */}
       <div className="container-content relative flex flex-1 flex-col justify-center pb-40 pt-40 md:pb-48">
-        <p className="flex items-center gap-3 text-xs uppercase tracking-widest2 text-accent-soft md:text-sm">
+        <p className="hero-in flex items-center gap-3 text-xs uppercase tracking-widest2 text-accent-soft md:text-sm" style={{ animationDelay: '0.05s' }}>
           <span className="inline-block h-[1px] w-10 bg-accent/70" aria-hidden="true" />
           Tungray New Energy
         </p>
-        <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-[1.2] text-white md:text-6xl">
+        <h1 className="hero-in mt-6 max-w-3xl text-balance text-4xl font-bold leading-[1.18] tracking-[-0.015em] text-white md:text-6xl" style={{ animationDelay: '0.15s' }}>
           {hero.title}
         </h1>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
+        <p className="hero-in mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg" style={{ animationDelay: '0.3s' }}>
           {hero.subtitle}
         </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="hero-in mt-10 flex flex-wrap gap-4" style={{ animationDelay: '0.45s' }}>
           <Link to={hero.ctas.primary.path} className="btn-primary">
             {hero.ctas.primary.label}
             <Icon name="arrowRight" className="h-4 w-4" />
@@ -54,15 +68,9 @@ export function Hero() {
         </div>
 
         {/* 数据条（数据口径见 config/home.ts 注释，发布前请确认） */}
-        <dl className="mt-16 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-6 border-t border-white/10 pt-8 md:grid-cols-4">
+        <dl className="hero-in mt-16 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-6 border-t border-white/10 pt-8 md:grid-cols-3" style={{ animationDelay: '0.6s' }}>
           {heroStats.map((s) => (
-            <div key={s.label} className="flex flex-col">
-              <dd className="order-1 text-2xl font-bold text-white md:text-3xl">
-                {s.value}
-                {s.unit && <span className="ml-0.5 text-base font-medium text-accent-soft">{s.unit}</span>}
-              </dd>
-              <dt className="order-2 mt-1 text-xs text-slate-400 md:text-[13px]">{s.label}</dt>
-            </div>
+            <StatItem key={s.label} value={s.value} unit={s.unit} label={s.label} />
           ))}
         </dl>
       </div>

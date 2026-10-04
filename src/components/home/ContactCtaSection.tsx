@@ -6,7 +6,7 @@ import { Icon } from '../ui/Icon'
 /** 首页模块七：联系我们 CTA（深色背景 + 简洁咨询表单入口） */
 export function ContactCtaSection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
+    <section className="relative overflow-hidden py-24 md:py-32">
       {/* 深色背景 + 网格 + 光晕 */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-950 to-navy-900" />
       <div className="absolute inset-0 bg-grid opacity-50" />

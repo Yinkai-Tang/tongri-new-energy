@@ -6,7 +6,7 @@ import { Icon } from '../ui/Icon'
 /** 首页模块四：为什么选择我们（4 个核心优势） */
 export function AdvantagesSection() {
   return (
-    <section className="bg-navy-950 py-20 md:py-28">
+    <section className="bg-navy-950 py-24 md:py-32">
       <div className="container-content">
         <SectionTitle en={advantages.titleEn} title={advantages.title} />
 

@@ -11,7 +11,7 @@ const fmt = (d: string) => d.replaceAll('-', '.')
 export function NewsSection() {
   const latest = news.slice(0, 3)
   return (
-    <section className="bg-navy-950 py-20 md:py-28">
+    <section className="bg-navy-950 py-24 md:py-32">
       <div className="container-content">
         <SectionTitle en="NEWS & INSIGHTS" title="新闻动态" />
 
