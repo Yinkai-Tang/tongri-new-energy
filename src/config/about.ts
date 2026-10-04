@@ -128,8 +128,11 @@ export const about = {
     title: '可持续发展',
     titleEn: 'SUSTAINABILITY / ESG',
     desc: '我们将绿色发展与责任经营融入业务全流程，与伙伴共创长期价值。',
-    image: asset('images/esg-green.svg'),
-    imageAlt: '绿色园区与生态（占位图，可替换）',
+    image: asset('images/esg-green.webp'),
+    sourceType: 'stock' as const,
+    isIllustrative: true,
+    replacementPriority: 'low' as const,
+    imageAlt: '山林幼苗生态场景（行业场景示意，非公司实景）',
     items: [
       {
         key: '环境 Environmental',

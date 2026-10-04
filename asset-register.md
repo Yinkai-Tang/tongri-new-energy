@@ -19,6 +19,7 @@
 | biz-energy-scene.webp | Unsplash | https://images.unsplash.com/photo-1509391366360-2e959784a276 | 同上（待补录） | 2026-10-02 | 同上 | （备用）新能源场景 | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（中） |
 | biz-computing-hero.webp | Unsplash | https://images.unsplash.com/photo-1558494949-ef010cbdcc31 | 同上（待补录） | 2026-10-02 | 同上 | 算力中心 · 页头与首页卡片 | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（中） |
 | biz-computing-scene.webp | Unsplash | https://images.unsplash.com/photo-1544197150-b99a580bb7a8 | 同上（待补录） | 2026-10-02 | 同上 | 应用场景与合作页头 | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（中） |
+| esg-green.webp | Unsplash | https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc | 同上（待补录） | 2026-10-02 | 同上 | 关于我们 · 可持续发展（ESG） | 否 | 否 | 行业场景示意 | ✅ 已核验 | 是（低） |
 
 **详情页 URL 待补录说明**：上表 CDN 直链稳定可用；Unsplash 图片详情页地址与 CDN ID 不同，
 后续可通过以图搜图或 Unsplash 站内检索补录（检索关键词已可从内容推断：
