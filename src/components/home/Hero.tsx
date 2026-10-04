@@ -49,7 +49,7 @@ export function Hero() {
       <div className="container-content relative flex flex-1 flex-col justify-center pb-40 pt-40 md:pb-48">
         <p className="hero-in flex items-center gap-3 text-xs uppercase tracking-widest2 text-accent-soft md:text-sm" style={{ animationDelay: '0.05s' }}>
           <span className="inline-block h-[1px] w-10 bg-accent/70" aria-hidden="true" />
-          Tungray New Energy
+          Tungray Green Energy Technology
         </p>
         <h1 className="hero-in mt-6 max-w-3xl text-balance text-4xl font-bold leading-[1.18] tracking-[-0.015em] text-white md:text-6xl" style={{ animationDelay: '0.15s' }}>
           {hero.title}

@@ -22,7 +22,7 @@ export const hero = {
   sourceType: 'stock' as const,
   isIllustrative: true,
   ctas: {
-    primary: { label: '了解同日新能源', path: '/about' },
+    primary: { label: '了解TRGE', path: '/about' },
     secondary: { label: '联系我们', path: '/contact' },
   },
 }
