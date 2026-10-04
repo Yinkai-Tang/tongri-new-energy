@@ -16,7 +16,11 @@ npm run placeholders  # 重新生成占位图（见下文"图片替换"）
 ```
 
 > 部署提示：站点使用 BrowserRouter，部署时需将所有路径回退到 `index.html`
-> （Nginx `try_files $uri /index.html;`、Vercel/Netlify 默认支持）。
+> （GitHub Pages 已通过 404.html 回退实现；Nginx `try_files $uri /index.html;`、Vercel/Netlify 默认支持）。
+>
+> **线上地址**：https://tungrayenergy.com（GitHub Pages，DNS 托管于 GoDaddy：
+> A 记录 @ → 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153，
+> CNAME www → yinkai-tang.github.io）。
 
 ## 页面结构
 

@@ -25,9 +25,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-        env:
-          # 部署在 https://<用户名>.github.io/<仓库名>/ 子路径下
-          DEPLOY_BASE: /tongri-new-energy/
       - name: SPA 回退与 Jekyll 关闭
         run: |
           cp dist/index.html dist/404.html
