@@ -28,7 +28,7 @@ export const site = {
    */
   brand: {
     /** 彩色透明底横版 Logo（深色页头当前临时方案） */
-    logo: '/brand/tungray-logo-color-transparent.png',
+    logo: asset('brand/tungray-logo-color-transparent.png'),
     /** Logo 替代文本（全站统一） */
     alt: 'Tungray 同日集团',
   },
