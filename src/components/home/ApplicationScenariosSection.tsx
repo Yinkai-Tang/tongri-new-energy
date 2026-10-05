@@ -35,7 +35,7 @@ export function ApplicationScenariosSection() {
                   </div>
                 </div>
                 <ul className="mt-6 flex-1 space-y-3.5">
-                  {b.scenarios.map((s) => (
+                  {b.scenarios.current.map((s) => (
                     <li key={s.title} className="flex gap-3 text-sm leading-relaxed text-slate-300">
                       <span aria-hidden="true" className="mt-[9px] h-1 w-3 shrink-0 bg-energy/70" />
                       <span>

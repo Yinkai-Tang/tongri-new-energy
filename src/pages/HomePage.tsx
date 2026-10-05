@@ -14,7 +14,7 @@ export function HomePage() {
   usePageMeta({
     title: '同日新能源 - 以产业协同，驱动绿色未来',
     description:
-      '同日新能源聚焦具身智能供应链、新能源与算力中心三大业务板块，依托集团智能制造产业基础，与产业伙伴共建绿色未来。',
+      '同日新能源聚焦具身智能供应链、新能源与算力中心三大业务板块，以制造业经验与产业资源为基础，与产业伙伴共建绿色未来。',
     image: asset('images/og-cover.svg'),
   })
 

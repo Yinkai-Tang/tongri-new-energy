@@ -11,7 +11,7 @@ import { site } from '../config/site'
 export function AboutPage() {
   usePageMeta({
     title: '关于我们',
-    description: `${site.name}公司简介、使命愿景、集团背景、发展历程与可持续发展（ESG）。`,
+    description: `${site.name}公司简介、使命愿景、产业基础、发展历程与可持续发展（ESG）。`,
   })
 
   return (
@@ -191,7 +191,7 @@ export function AboutPage() {
               <div className="relative">
                 <h2 className="text-2xl font-bold text-white md:text-3xl">期待与您深入交流</h2>
                 <p className="mx-auto mt-3 max-w-xl text-sm text-slate-400">
-                  了解更多集团背景与合作模式，欢迎随时与我们联系。
+                  了解产业基础与合作方式，欢迎随时与我们联系。
                 </p>
                 <div className="mt-7 flex flex-wrap justify-center gap-4">
                   <Link to="/contact" className="btn-primary">联系我们</Link>

@@ -127,8 +127,6 @@ export function ContactPage() {
                     <Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" />
                     <span>
                       {site.contact.address}
-                      <br />
-                      <span className="text-slate-500">新加坡（集团总部）：{site.contact.addressEn}</span>
                     </span>
                   </li>
                   <li className="flex gap-3">
@@ -137,7 +135,7 @@ export function ContactPage() {
                   </li>
                 </ul>
                 <p className="mt-5 border-t border-white/5 pt-4 text-xs leading-relaxed text-slate-600">
-                  以上联系信息来自集团资料，正式发布前请逐项确认。
+                  以上联系信息以公司最终公布为准。
                 </p>
               </div>
             </Reveal>

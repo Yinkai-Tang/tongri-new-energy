@@ -71,7 +71,7 @@ export function BusinessDetailPage() {
       {/* 服务 / 能力范围 */}
       <section className="bg-navy-900/40 py-24 md:py-32">
         <div className="container-content">
-          <SectionTitle en="CAPABILITIES" title="服务与能力范围" />
+          <SectionTitle en="CAPABILITIES" title={biz.capabilitiesTitle ?? '服务与能力范围'} />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {biz.capabilities.map((c, i) => (
               <Reveal key={c.title} delay={i * 70}>
@@ -131,24 +131,110 @@ export function BusinessDetailPage() {
         </div>
       </section>
 
-      {/* 应用场景 */}
+{/* 产品与应用规划（未来扩展方向，非已上线产品） */}
+      {biz.planning && (
+        <section className="bg-navy-900/40 py-24 md:py-32">
+          <div className="container-content">
+            <SectionTitle en={biz.planning.en} title={biz.planning.title} />
+            <Reveal className="mt-8 max-w-3xl">
+              <p className="text-sm leading-relaxed text-slate-400 md:text-base">{biz.planning.desc}</p>
+            </Reveal>
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {biz.planning.items.map((item, i) => (
+                <Reveal key={item.title} delay={i * 80}>
+                  <div className="card-dark card-dark-hover group h-full p-6">
+                    <span className="font-mono text-sm text-energy">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="mt-3 text-base font-semibold text-white">{item.title}</h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-slate-400">{item.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="mt-10">
+              <p className="text-xs leading-relaxed text-slate-500">
+                以上为产品与应用规划方向，不代表已上线产品、已量产型号或已建成平台。
+              </p>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* 应用场景（两级：当前优先场景 / 拓展方向，拓展≠已交付案例） */}
       <section className="bg-navy-950 py-24 md:py-32">
         <div className="container-content">
           <SectionTitle en="APPLICATIONS" title="应用场景" />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {biz.scenarios.map((s, i) => (
+          {biz.scenarios.expansion && biz.scenarios.expansion.length > 0 && (
+            <Reveal className="mt-10 max-w-2xl">
+              <p className="text-sm leading-relaxed text-slate-400">
+                以下场景按<strong className="text-slate-200">当前优先</strong>与
+                <strong className="text-slate-200">{biz.scenarios.expansionLabel ?? '拓展方向'}</strong>
+                两类整理，均为目标应用方向，不代表已交付案例。
+              </p>
+            </Reveal>
+          )}
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {biz.scenarios.current.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
                 <div className="card-dark card-dark-hover group h-full p-6">
-                  <span className={`h-[2px] w-8 block ${biz.theme === 'energy' ? 'bg-energy' : 'bg-accent'} transition-all duration-500 group-hover:w-full`} />
+                  <span className="text-[10px] font-mono uppercase tracking-widest2 text-accent-soft">当前场景</span>
+                  <span className={`mt-3 h-[2px] w-8 block ${biz.theme === 'energy' ? 'bg-energy' : 'bg-accent'} transition-all duration-500 group-hover:w-full`} />
                   <h3 className="mt-4 text-base font-semibold text-white">{s.title}</h3>
                   <p className="mt-2 text-[13px] leading-relaxed text-slate-400">{s.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
+          {biz.scenarios.expansion && biz.scenarios.expansion.length > 0 && (
+            <>
+              <Reveal className="mt-14">
+                <p className="font-mono text-[11px] uppercase tracking-widest2 text-slate-500">
+                  {biz.scenarios.expansionLabel ?? '拓展方向'} — EXPANSION
+                </p>
+              </Reveal>
+              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {biz.scenarios.expansion.map((s, i) => (
+                  <Reveal key={s.title} delay={i * 80}>
+                    <div className="card-dark card-dark-hover group h-full p-6">
+                      <span className="text-[10px] font-mono uppercase tracking-widest2 text-slate-500">拓展方向</span>
+                      <h3 className="mt-3 text-base font-semibold text-white">{s.title}</h3>
+                      <p className="mt-2 text-[13px] leading-relaxed text-slate-400">{s.desc}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
+
+      {/* 能力建设方向（正在逐步完善的协同机制，非已具备能力） */}
+      {biz.capabilityBuilding && (
+        <section className="bg-navy-900/40 py-24 md:py-32">
+          <div className="container-content">
+            <SectionTitle en={biz.capabilityBuilding.en} title={biz.capabilityBuilding.title} dark />
+            <Reveal className="mt-8 max-w-3xl">
+              <p className="text-sm leading-relaxed text-slate-400 md:text-base">{biz.capabilityBuilding.desc}</p>
+            </Reveal>
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {biz.capabilityBuilding.items.map((item, i) => (
+                <Reveal key={item.title} delay={i * 80}>
+                  <div className="card-dark card-dark-hover group h-full p-6">
+                    <span className="font-mono text-sm text-energy">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="mt-3 text-base font-semibold text-white">{item.title}</h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-slate-400">{item.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="mt-10">
+              <p className="text-xs leading-relaxed text-slate-500">
+                以上为能力建设方向，用于说明正在逐步完善的协同机制，不代表已建成的能力或已交付项目。
+              </p>
+            </Reveal>
+          </div>
+        </section>
+      )}
       {/* 合作方式（承接原"相关案例"栏目位置；案例栏目待有真实案例后启用） */}
       <section className="bg-navy-900/40 py-24 md:py-32">
         <div className="container-content">
@@ -157,7 +243,7 @@ export function BusinessDetailPage() {
             {[
               { title: '需求咨询与方案探讨', desc: '面向您的业务场景，沟通需求背景，探讨可行的方案方向。', icon: 'message' },
               { title: '方案设计与设备配置', desc: '输出方案设计建议与设备选型组合，兼顾性能、成本与交付。', icon: 'doc' },
-              { title: '系统集成与项目交付', desc: '依托集团制造与供应链体系，支持系统集成与批量交付。', icon: 'gear' },
+              { title: '系统集成与项目交付', desc: '协调基础设施与设备资源，支持系统集成与批量交付。', icon: 'gear' },
               { title: '运维支持与长期协作', desc: '按项目约定提供运行保障、维护响应与长期技术协作。', icon: 'headset' },
             ].map((c, i) => (
               <Reveal key={c.title} delay={i * 80}>
